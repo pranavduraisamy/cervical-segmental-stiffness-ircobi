@@ -1,0 +1,104 @@
+test_id,ref_id,sample_id,sex,age,level,loading,test,ascii_id,date,cod,injury
+4385,B02F03FAIL,B02,f,66,C0C3,extension,failure,6,19/jan/1998,NA,type iii dens
+4386,B02F03FLEX,B02,f,66,C0C3,both,flexibility,1,19/jan/1998,NA,NA
+4387,B02F45FAIL,B02,f,66,C4C5,NA,failure,NA,19/jan/1998,NA,complete disruption of all ligaments
+4388,B02F45FLEX,B02,f,66,C4C5,both,flexibility,1,19/jan/1998,NA,NA
+4389,B02F67FAIL,B02,f,66,C6C7,NA,failure,NA,19/jan/1998,NA,bilateral c6 fractures.  posterior elements remained in the casting.
+4390,B02F67FLEX,B02,f,66,C6C7,both,flexibility,1,19/jan/1998,NA,NA
+4391,B03F02FAIL,B03,f,51,C0C2,flexion,failure,6,25/mar/1998,renal failure,posterior atlanto-occipital sprain
+4392,B03F02FLEX,B03,f,51,C0C2,both,flexibility,1,24/mar/1998,renal failure,NA
+4393,B03F34FAIL,B03,f,51,C3C4,extension,failure,6,25/mar/1998,renal failure,0
+4394,B03F34FLEX,B03,f,51,C3C4,both,flexibility,1,24/mar/1998,renal failure,NA
+4395,B03F56FAIL,B03,f,51,C5C6,flexion,failure,6,24/mar/1998,renal failure,"partial disarticulation-posterior capsules torn, pll distended."
+4396,B03F56FLEX,B03,f,51,C5C6,both,flexibility,1,24/mar/1998,renal failure,NA
+4397,B03F71FAIL,B03,f,51,C7T1,extension,failure,6,24/mar/1998,renal failure,bilaminar fracture of t1 through the fixation holes.
+4398,B03F71FLEX,B03,f,51,C7T1,both,flexibility,1,24/mar/1998,renal failure,NA
+4426,B04F02FAIL,B04,f,46,C0C2,extension,failure,6,01/apr/1998,NA,hangman's fracture; c2 inferior endplate fracture through fixation pts
+4427,B04F02FLEX,B04,f,46,C0C2,both,flexibility,1,01/apr/1998,NA,NA
+4428,B04F34FAIL,B04,f,46,C3C4,flexion,failure,6,31/mar/1998,NA,complete disruption of all ligaments.
+4429,B04F34FLEX,B04,f,46,C3C4,both,flexibility,1,31/mar/1998,NA,NA
+4430,B04F56FAIL,B04,f,46,C5C6,extension,failure,6,31/mar/1998,NA,c6 fractures of the body and lamina through the fixation holes.
+4431,B04F56FLEX,B04,f,46,C5C6,both,flexibility,1,31/mar/1998,NA,NA
+4432,B04F71FAIL,B04,f,46,C7T1,extension,failure,6,31/mar/1998,NA,partial disarticulation.  fractures of the left t1 pedicle and facet.
+4433,B04F71FLEX,B04,f,46,C7T1,both,flexibility,1,31/mar/1998,NA,NA
+4908,B05F02FAIL,B05,f,42,C0C2,extension,failure,6,22/apr/1998,cva,hangman's fracture. c2 anterior fixation pulled through endplate.
+4909,B05F02FLEX,B05,f,42,C0C2,both,flexibility,1,22/apr/1998,cva,NA
+4910,B05F34FAIL,B05,f,42,C3C4,extension,failure,6,22/apr/1998,cva,1000
+4911,B05F34FLEX,B05,f,42,C3C4,both,flexibility,1,22/apr/1998,cva,NA
+4912,B05F56FAIL,B05,f,42,C5C6,flexion,failure,6,22/apr/1998,cva,disrupt. of all ligaments except ant longit. ligament &  ant capsules.
+4913,B05F56FLEX,B05,f,42,C5C6,both,flexibility,1,22/apr/1998,cva,NA
+4914,B05F71FAIL,B05,f,42,C7T1,extension,failure,6,22/apr/1998,cva,bilaminar fract of t1 thr the fixation holes. t1 inf endplate fract
+4915,B05F71FLEX,B05,f,42,C7T1,both,flexibility,1,22/apr/1998,cva,NA
+6348,B06F34FAIL,B06,f,49,C3C4,flexion,failure,6,28/apr/1998,subarachnoid hemorrhage,complete disruption of the disc and ligaments.
+6349,B06F34FLEX,B06,f,49,C3C4,both,flexibility,1,28/apr/1998,subarachnoid hemorrhage,NA
+6350,B06F56FLEX,B06,f,49,C5C6,both,flexibility,1,28/apr/1998,subarachnoid hemorrhage,NA
+6351,B06F71FAIL,B06,f,49,C7T1,flexion,failure,6,28/apr/1998,subarachnoid hemorrhage,fracture dislocation involving the fixation.
+6352,B06F71FLEX,B06,f,49,C7T1,both,flexibility,1,28/apr/1998,subarachnoid hemorrhage,NA
+6353,B06FO2FAIL,B06,f,49,C0C2,extension,failure,6,29/apr/1998,subarachnoid hemorrhage,bilateral condylar fractures.
+6354,B06FO2FLEX,B06,f,49,C0C2,both,flexibility,1,29/apr/1998,subarachnoid hemorrhage,NA
+6363,B09FO2FAIL,B09,f,66,C0C2,flexion,failure,6,11/aug/1998,myocardial infarction,"pll, tectorial, and r alar ligaments torn."
+6364,B09FO2FLEX,B09,f,66,C0C2,both,flexibility,1,11/aug/1998,myocardial infarction,NA
+6365,B10F34FAIL,B10,f,33,C3C4,extension,failure,6,18/aug/1998,pneumonia,fracture dislocation involving the fixation.
+6366,B10F34FLEX,B10,f,33,C3C4,both,flexibility,1,18/aug/1998,pneumonia,NA
+6367,B10F56FAIL,B10,f,33,C5C6,flexion,failure,6,18/aug/1998,pneumonia,fracture dislocation involving the fixation.
+6368,B10F56FLEX,B10,f,33,C5C6,both,flexibility,1,18/aug/1998,pneumonia,NA
+6369,B10F71FAIL,B10,f,33,C7T1,extension,failure,6,18/aug/1998,pneumonia,fracture dislocation involving the fixation.
+6370,B10F71FLEX,B10,f,33,C7T1,both,flexibility,1,18/aug/1998,pneumonia,NA
+6371,B10FO2FAIL,B10,f,33,C0C2,flexion,failure,6,19/aug/1998,pneumonia,sprain ofposterior o-a ligament and posterior capsules.
+6372,B10FO2FLEX,B10,f,33,C0C2,both,flexibility,1,19/aug/1998,pneumonia,NA
+6373,B11F45FAIL,B11,f,45,C4C5,flexion,failure,6,16/sep/1998,pulmonary embolism,complete disruption of all ligaments and the disc.
+6374,B11F45FLEX,B11,f,45,C4C5,both,flexibility,1,16/sep/1998,pulmonary embolism,NA
+6375,B11F67FAIL,B11,f,45,C6C7,flexion,failure,6,16/sep/1998,pulmonary embolism,fracture dislocation involving the fixation.
+6376,B11F67FLEX,B11,f,45,C6C7,both,flexibility,1,16/sep/1998,pulmonary embolism,NA
+6377,B11FO2FAIL,B11,f,45,C0C2,extension,failure,6,17/sep/1998,pulmonary embolism,c2 inferior endplate fracture & bilateral lamina & spinous process
+6378,B11FO2FLEX,B11,f,45,C0C2,both,flexibility,1,17/sep/1998,pulmonary embolism,NA
+6379,B07F34FAIL,B07,f,52,C3C4,extension,failure,6,19/may/1998,cardiac arrest,complete disruption of disc and ligaments.
+6380,B07F34FLEX,B07,f,52,C3C4,both,flexibility,1,19/may/1998,cardiac arrest,NA
+6381,B07F56FAIL,B07,f,52,C5C6,flexion,failure,6,19/may/1998,cardiac arrest,complete disruption of disc and ligaments.
+6382,B07F56FLEX,B07,f,52,C5C6,both,flexibility,1,19/may/1998,cardiac arrest,NA
+6383,B07F71FAIL,B07,f,52,C7T1,extension,failure,6,19/may/1998,cardiac arrest,complete disruption of disc and ligaments.
+6384,B07F71FLEX,B07,f,52,C7T1,both,flexibility,1,19/may/1998,cardiac arrest,NA
+6385,B07FO2FAIL,B07,f,52,C0C2,flexion,failure,6,20/may/1998,cardiac arrest,halo-fixation failed.
+6386,B07FO2FLEX,B07,f,52,C0C2,NA,flexibility,NA,20/may/1998,cardiac arrest,NA
+6451,B12F34FAIL,B12,f,58,C3C4,flexion,failure,6,02/dec/1998,myocardial infarction/chronic obstructive pulmonary disease,complete disruption of all ligaments and the disc.
+6452,B12F34FLEX,B12,f,58,C3C4,both,flexibility,1,02/dec/1998,myocardial infarction/chronic obstructive pulmonary disease,NA
+6453,B12F56FAIL,B12,f,58,C5C6,extension,failure,6,02/dec/1998,myocardial infarction/chronic obstructive pulmonary disease,complete disruption of all ligaments and the disc.
+6454,B12F56FLEX,B12,f,58,C5C6,both,flexibility,1,02/dec/1998,myocardial infarction/chronic obstructive pulmonary disease,NA
+6455,B12F71FAIL,B12,f,58,C7T1,flexion,failure,6,03/dec/1998,myocardial infarction/chronic obstructive pulmonary disease,fracture and dislocation involving the fixation.
+6456,B12F71FLEX,B12,f,58,C7T1,NA,flexibility,NA,03/dec/1998,myocardial infarction/chronic obstructive pulmonary disease,NA
+6457,B12FO2FAIL,B12,f,58,C0C2,extension,failure,6,03/dec/1998,myocardial infarction/chronic obstructive pulmonary disease,yielding of the fixation wires.
+6458,B12FO2FLEX,B12,f,58,C0C2,both,flexibility,1,03/dec/1998,myocardial infarction/chronic obstructive pulmonary disease,NA
+6459,B13F34FAIL,B13,f,52,C3C4,flexion,failure,6,06/jan/1999,cerebrovascular accident,complete disruption of all ligaments and the disc.
+6460,B13F34FLEX,B13,f,52,C3C4,both,flexibility,1,06/jan/1999,cerebrovascular accident,NA
+6461,B13F56FAIL,B13,f,52,C5C6,extension,failure,6,06/jan/1999,cerebrovascular accident,fracture dislocation involving the fixation.
+6462,B13F56FLEX,B13,f,52,C5C6,both,flexibility,1,06/jan/1999,cerebrovascular accident,NA
+6463,B13FO2FAIL,B13,f,52,C0C2,extension,failure,6,07/jan/1999,cerebrovascular accident,halo fixation failed.
+6464,B13FO2FLEX,B13,f,52,C0C2,both,flexibility,1,07/jan/1999,cerebrovascular accident,NA
+6465,B14F34FAIL,B14,f,56,C3C4,extension,failure,6,18/jan/1999,cardiopulmonary arrest,fracture dislocation involving the fixation.
+6466,B14F34FLEX,B14,f,56,C3C4,both,flexibility,1,18/jan/1999,cardiopulmonary arrest,NA
+6467,B14F56FAIL,B14,f,56,C5C6,flexion,failure,6,18/jan/1999,cardiopulmonary arrest,complete disruption of all ligaments and the disc.
+6468,B14F56FLEX,B14,f,56,C5C6,both,flexibility,1,18/jan/1999,cardiopulmonary arrest,NA
+6469,B14F71FAIL,B14,f,56,C7T1,extension,failure,6,19/jan/1999,cardiopulmonary arrest,complete disruption of all ligaments and the disc.
+6470,B14F71FLEX,B14,f,56,C7T1,NA,flexibility,NA,19/jan/1999,cardiopulmonary arrest,NA
+6471,B14FO2FAIL,B14,f,56,C0C2,flexion,failure,6,19/jan/1999,cardiopulmonary arrest,type iii dens fracture.
+6472,B14FO2FLEX,B14,f,56,C0C2,both,flexibility,1,19/jan/1999,cardiopulmonary arrest,NA
+6473,B15F34FAIL,B15,f,53,C3C4,extension,failure,6,21/jan/1999,chronic obstructive pulmonary disease,fracture dislocation involving the fixation.
+6474,B15F34FLEX,B15,f,53,C3C4,both,flexibility,1,21/jan/1999,chronic obstructive pulmonary disease,NA
+6475,B15F56FAIL,B15,f,53,C5C6,flexion,failure,6,21/jan/1999,chronic obstructive pulmonary disease,fracture dislocation involving the fixation.
+6476,B15F56FLEX,B15,f,53,C5C6,both,flexibility,1,21/jan/1999,chronic obstructive pulmonary disease,NA
+6477,B15F71FAIL,B15,f,53,C7T1,extension,failure,6,22/jan/1999,chronic obstructive pulmonary disease,fracture dislocation involving the fixation.
+6478,B15F71FLEX,B15,f,53,C7T1,both,flexibility,1,22/jan/1999,chronic obstructive pulmonary disease,NA
+6479,B15FO2FAIL,B15,f,53,C0C2,flexion,failure,6,22/jan/1999,chronic obstructive pulmonary disease,type iii dens fracture.
+6480,B15FO2FLEX,B15,f,53,C0C2,both,flexibility,1,22/jan/1999,chronic obstructive pulmonary disease,NA
+6481,B16F34FAIL,B16,f,41,C3C4,flexion,failure,6,13/jul/1999,subarachnoid hemorrhage,complete disruption of all ligaments and the disc.
+6482,B16F34FLEX,B16,f,41,C3C4,both,flexibility,1,13/jul/1999,subarachnoid hemorrhage,NA
+6483,B16F56FAIL,B16,f,41,C5C6,extension,failure,6,13/jul/1999,subarachnoid hemorrhage,complete disruption of all ligaments and the disc.
+6484,B16F56FLEX,B16,f,41,C5C6,both,flexibility,1,13/jul/1999,subarachnoid hemorrhage,NA
+6485,B16F71FAIL,B16,f,41,C7T1,flexion,failure,6,14/jul/1999,subarachnoid hemorrhage,complete disruption of all ligaments and the disc.
+6486,B16F71FLEX,B16,f,41,C7T1,both,flexibility,1,14/jul/1999,subarachnoid hemorrhage,NA
+6487,B16FO2FAIL,B16,f,41,C0C2,extension,failure,6,14/jul/1999,subarachnoid hemorrhage,fixation pulled through the c2 endplate.
+6488,B16FO2FLEX,B16,f,41,C0C2,both,flexibility,1,14/jul/1999,subarachnoid hemorrhage,NA
+6489,B17FO2FAIL,B17,f,46,C0C2,extension,failure,6,15/jul/1999,subarachnoid hemorrhage,no injury.
+6490,B17FO2FLEX,B17,f,46,C0C2,both,flexibility,1,15/jul/1999,subarachnoid hemorrhage,NA
+6491,B18FO2FAIL,B18,f,56,C0C2,extension,failure,6,15/jul/1999,lung cancer,fixation wires pulled out.
+6492,B18FO2FLEX,B18,f,56,C0C2,NA,flexibility,NA,15/jul/1999,lung cancer,NA

@@ -1,0 +1,129 @@
+test_id,ref_id,sample_id,sex,age,level,loading,test,ascii_id,date,cod,injury
+6355,B08M34FAIL,B08,m,47,C3C4,flexion,failure,6,28/jul/1998,esophageal varices,complete disruption of all ligaments and the disc.
+6356,B08M34FLEX,B08,m,47,C3C4,both,flexibility,1,28/jul/1998,esophageal varices,NA
+6357,B08M56FAIL,B08,m,47,C5C6,extension,failure,6,28/jul/1998,esophageal varices,complete disruption of all ligaments and the disc.
+6358,B08M56FLEX,B08,m,47,C5C6,both,flexibility,1,28/jul/1998,esophageal varices,NA
+6359,B08M71FAIL,B08,m,47,C7T1,flexion,failure,6,28/jul/1998,esophageal varices,complete disruption of all ligaments and the disc.
+6360,B08M71FLEX,B08,m,47,C7T1,both,flexibility,1,28/jul/1998,esophageal varices,NA
+6361,B08MO2FAIL,B08,m,47,C0C2,extension,failure,6,29/jul/1998,esophageal varices,no failure.
+6362,B08MO2FLEX,B08,m,47,C0C2,both,flexibility,1,29/jul/1998,esophageal varices,NA
+7356,B19M45EXTN,B19,m,69,C4C5,extension,flexibility,NA,07/aug/2002,alveolar capillary dysplasia,NA
+7357,B19M45FAIF,B19,m,69,C4C5,flexion,failure,7,07/aug/2002,alveolar capillary dysplasia,disruption of c4-c5 posterior ligaments; anterior ligaments intact.
+7358,B19M45FLEX,B19,m,69,C4C5,flexion,flexibility,NA,07/aug/2002,alveolar capillary dysplasia,NA
+7359,B19M67EXTN,B19,m,69,C6C7,extension,flexibility,NA,07/aug/2002,alveolar capillary dysplasia,NA
+7360,B19M67FAIE,B19,m,69,C6C7,extension,failure,7,07/aug/2002,alveolar capillary dysplasia,disruption of c7-t1; anterior fracture of c7.
+7361,B19M67FLEX,B19,m,69,C6C7,flexion,flexibility,NA,07/aug/2002,alveolar capillary dysplasia,NA
+7362,B19MO2EXTN,B19,m,69,C0C2,extension,flexibility,NA,07/aug/2002,alveolar capillary dysplasia,NA
+7363,B19MO2FAIF,B19,m,69,C0C2,flexion,failure,4,07/aug/2002,alveolar capillary dysplasia,failure of atlanto-axial membrane at c1-c2 joint space.
+7364,B19MO2FLEX,B19,m,69,C0C2,flexion,flexibility,NA,07/aug/2002,alveolar capillary dysplasia,NA
+7398,B21M45EXTN,B21,m,69,C4C5,extension,flexibility,1,21/nov/2002,pulmonary embolism,NA
+7399,B21M45FAIE,B21,m,69,C4C5,extension,failure,7,21/nov/2002,pulmonary embolism,complete disruption of disc and ligaments between c4-c5.
+7400,B21M45FLEX,B21,m,69,C4C5,flexion,flexibility,1,21/nov/2002,pulmonary embolism,NA
+7401,B21MO2EXTN,B21,m,69,C0C2,extension,flexibility,1,21/nov/2002,pulmonary embolism,NA
+7402,B21MO2FAIE,B21,m,69,C0C2,extension,failure,4,21/nov/2002,pulmonary embolism,disruption of c2-c3 ligaments with c2 fracture.
+7403,B21MO2FLEX,B21,m,69,C0C2,flexion,flexibility,1,21/nov/2002,pulmonary embolism,NA
+7404,B22M45EXTN,B22,m,56,C4C5,extension,flexibility,1,25/nov/2002,cardiac arrest,NA
+7405,B22M45FAIF,B22,m,56,C4C5,flexion,failure,7,25/nov/2002,cardiac arrest,complete disruption of disc and ligaments between c4-c5.
+7406,B22M45FLEX,B22,m,56,C4C5,flexion,flexibility,1,25/nov/2002,cardiac arrest,NA
+7407,B22M67EXTN,B22,m,56,C6C7,extension,flexibility,1,25/nov/2002,cardiac arrest,NA
+7408,B22M67FAIE,B22,m,56,C6C7,extension,failure,7,25/nov/2002,cardiac arrest,complete disruption of ligaments between c6-c7 with fractures.
+7409,B22M67FLEX,B22,m,56,C6C7,flexion,flexibility,1,25/nov/2002,cardiac arrest,NA
+7410,B22MO2EXTN,B22,m,56,C0C2,extension,flexibility,NA,25/nov/2002,cardiac arrest,NA
+7411,B22MO2FAIF,B22,m,56,C0C2,flexion,failure,4,25/nov/2002,cardiac arrest,c1 fracture with laxity of alar ligament and strain of left lamina.
+7412,B22MO2FLEX,B22,m,56,C0C2,flexion,flexibility,NA,25/nov/2002,cardiac arrest,NA
+7413,B23M45EXTN,B23,m,65,C4C5,extension,flexibility,1,04/dec/2002,myocardial infarction,NA
+7414,B23M45FAIE,B23,m,65,C4C5,extension,failure,7,04/dec/2002,myocardial infarction,complete disruption of disc and ligaments between c4-c5.
+7415,B23M45FLEX,B23,m,65,C4C5,flexion,flexibility,1,04/dec/2002,myocardial infarction,NA
+7416,B23M67EXTN,B23,m,65,C6C7,extension,flexibility,NA,04/dec/2002,myocardial infarction,NA
+7417,B23M67FAIF,B23,m,65,C6C7,flexion,failure,7,04/dec/2002,myocardial infarction,complete disruption of disc and ligaments between c6-c7.
+7418,B23M67FLEX,B23,m,65,C6C7,flexion,flexibility,NA,04/dec/2002,myocardial infarction,NA
+7419,B23MO2EXTN,B23,m,65,C0C2,extension,flexibility,NA,04/dec/2002,myocardial infarction,NA
+7420,B23MO2FAIE,B23,m,65,C0C2,extension,failure,4,04/dec/2002,myocardial infarction,type iii dens fracture. left c2 fractures.
+7421,B23MO2FLEX,B23,m,65,C0C2,flexion,flexibility,1,04/dec/2002,myocardial infarction,NA
+7422,B24M45EXTN,B24,m,71,C4C5,extension,flexibility,1,14/jan/2003,congestive heart failure,NA
+7423,B24M45FAIF,B24,m,71,C4C5,flexion,failure,7,14/jan/2003,congestive heart failure,complete disruption of disc and ligaments between c4-c5.
+7424,B24M45FLEX,B24,m,71,C4C5,flexion,flexibility,1,14/jan/2003,congestive heart failure,NA
+7425,B24M67EXTN,B24,m,71,C6C7,extension,flexibility,NA,14/jan/2003,congestive heart failure,NA
+7426,B24M67FAIE,B24,m,71,C6C7,extension,failure,7,14/jan/2003,congestive heart failure,complete disruption of disc and ligaments between c6-c7.
+7427,B24M67FLEX,B24,m,71,C6C7,flexion,flexibility,NA,14/jan/2003,congestive heart failure,NA
+7428,B24MO2EXTN,B24,m,71,C0C2,extension,flexibility,NA,14/jan/2003,congestive heart failure,NA
+7429,B24MO2FAIF,B24,m,71,C0C2,flexion,failure,4,14/jan/2003,congestive heart failure,partial disruption at occiput-c2; total failure of soft tissue.
+7430,B24MO2FLEX,B24,m,71,C0C2,flexion,flexibility,1,14/jan/2003,congestive heart failure,NA
+7431,B25M45EXTN,B25,m,74,C4C5,extension,flexibility,1,16/jan/2003,subarachnoid hemorrhage,NA
+7432,B25M45FAIF,B25,m,74,C4C5,flexion,failure,7,16/jan/2003,subarachnoid hemorrhage,complete disruption of disc and ligaments between c4-c5.
+7433,B25M45FLEX,B25,m,74,C4C5,flexion,flexibility,NA,16/jan/2003,subarachnoid hemorrhage,NA
+7434,B25M67EXTN,B25,m,74,C6C7,extension,flexibility,NA,16/jan/2003,subarachnoid hemorrhage,NA
+7435,B25M67FAIE,B25,m,74,C6C7,extension,failure,7,16/jan/2003,subarachnoid hemorrhage,complete disruption of disc and ligaments between c6-c7.
+7436,B25M67FLEX,B25,m,74,C6C7,flexion,flexibility,1,16/jan/2003,subarachnoid hemorrhage,NA
+7437,B25MO2EXTN,B25,m,74,C0C2,extension,flexibility,1,16/jan/2003,subarachnoid hemorrhage,NA
+7438,B25MO2FAIE,B25,m,74,C0C2,extension,failure,4,16/jan/2003,subarachnoid hemorrhage,partial disruption of o-c1 ligaments; total soft tissue failure.
+7439,B25MO2FLEX,B25,m,74,C0C2,flexion,flexibility,NA,16/jan/2003,subarachnoid hemorrhage,NA
+7440,B26MO2EXTN,B26,m,74,C0C2,extension,flexibility,NA,22/jan/2003,myocardial infarction,NA
+7441,B26MO2FAIF,B26,m,74,C0C2,flexion,failure,4,22/jan/2003,myocardial infarction,non-catastrophic injury.
+7442,B26MO2FLEX,B26,m,74,C0C2,flexion,flexibility,1,22/jan/2003,myocardial infarction,NA
+7443,B27M45EXTN,B27,m,72,C4C5,extension,flexibility,NA,28/jan/2003,cardiac arrest,NA
+7444,B27M45FAIF,B27,m,72,C4C5,flexion,failure,7,28/jan/2003,cardiac arrest,disruption of posterior ligaments and capsules.
+7445,B27M45FLEX,B27,m,72,C4C5,flexion,flexibility,1,28/jan/2003,cardiac arrest,NA
+7446,B27M67EXTN,B27,m,72,C6C7,extension,flexibility,NA,28/jan/2003,cardiac arrest,NA
+7447,B27M67FAIE,B27,m,72,C6C7,extension,failure,7,28/jan/2003,cardiac arrest,complete disruption of disc and ligaments between c6-c7.
+7448,B27M67FLEX,B27,m,72,C6C7,flexion,flexibility,NA,28/jan/2003,cardiac arrest,NA
+7449,B27MO2EXTN,B27,m,72,C0C2,extension,flexibility,1,28/jan/2003,cardiac arrest,NA
+7450,B27MO2FAIE,B27,m,72,C0C2,extension,failure,4,28/jan/2003,cardiac arrest,type iii dens fracture; disruption of all ligaments between c1-c2.
+7451,B27MO2FLEX,B27,m,72,C0C2,flexion,flexibility,1,28/jan/2003,cardiac arrest,NA
+7452,B28M45EXTN,B28,m,69,C4C5,extension,flexibility,1,04/feb/2003,myocardial infarction,NA
+7453,B28M45FAIE,B28,m,69,C4C5,extension,failure,7,04/feb/2003,myocardial infarction,complete disruption of disc and ligaments between c4-c5.
+7454,B28M45FLEX,B28,m,69,C4C5,flexion,flexibility,NA,04/feb/2003,myocardial infarction,NA
+7455,B28MO2EXTN,B28,m,69,C0C2,extension,flexibility,1,04/feb/2003,myocardial infarction,NA
+7456,B28MO2FAIF,B28,m,69,C0C2,flexion,failure,4,04/feb/2003,myocardial infarction,non-catastrophic injury.  oc2 segment stable with slight laxity.
+7457,B28MO2FLEX,B28,m,69,C0C2,flexion,flexibility,1,04/feb/2003,myocardial infarction,NA
+7458,B29MO2EXTN,B29,m,74,C0C2,extension,flexibility,NA,06/feb/2003,atherosclerotic cardiovascular disease,NA
+7459,B29MO2FAIE,B29,m,74,C0C2,extension,failure,4,06/feb/2003,atherosclerotic cardiovascular disease,type iii dens fracture;total disruption of ligaments & facets at c1-c2
+7460,B29MO2FLEX,B29,m,74,C0C2,flexion,flexibility,1,06/feb/2003,atherosclerotic cardiovascular disease,NA
+7461,B30M45EXTN,B30,m,51,C4C5,extension,flexibility,1,11/feb/2003,myocardial infarction,NA
+7462,B30MO2EXTN,B30,m,51,C0C2,extension,flexibility,1,11/feb/2003,myocardial infarction,NA
+7463,B30MO2FAIF,B30,m,51,C0C2,flexion,failure,4,11/feb/2003,myocardial infarction,non-catastrophic injury.
+7464,B30MO2FLEX,B30,m,51,C0C2,flexion,flexibility,1,11/feb/2003,myocardial infarction,NA
+7465,B31M45EXTN,B31,m,64,C4C5,extension,flexibility,1,13/feb/2003,cardiopulmonary arrest,NA
+7466,B31M45FAIE,B31,m,64,C4C5,extension,failure,7,13/feb/2003,cardiopulmonary arrest,disruption of disc & ligaments c4-c5 with c4 spinous process fracture.
+7467,B31M45FLEX,B31,m,64,C4C5,flexion,flexibility,NA,13/feb/2003,cardiopulmonary arrest,NA
+7468,B31M67EXTN,B31,m,64,C6C7,extension,flexibility,NA,13/feb/2003,cardiopulmonary arrest,NA
+7469,B31M67FAIF,B31,m,64,C6C7,flexion,failure,7,13/feb/2003,cardiopulmonary arrest,complete disruption of disc and ligaments between c6-c7.
+7470,B31M67FLEX,B31,m,64,C6C7,flexion,flexibility,NA,13/feb/2003,cardiopulmonary arrest,NA
+7471,B31MO2EXTN,B31,m,64,C0C2,extension,flexibility,1,13/feb/2003,cardiopulmonary arrest,NA
+7472,B31MO2FAIE,B31,m,64,C0C2,extension,failure,4,13/feb/2003,cardiopulmonary arrest,type iii dens fracture; disruption of ligaments & capsules from c1-c2.
+7473,B31MO2FLEX,B31,m,64,C0C2,flexion,flexibility,NA,13/feb/2003,cardiopulmonary arrest,NA
+7474,B32M45EXTN,B32,m,57,C4C5,extension,flexibility,1,18/feb/2003,myocardial infarction,NA
+7475,B32M45FAIF,B32,m,57,C4C5,flexion,failure,7,18/feb/2003,myocardial infarction,dislocation of c4-c5 joint with c4 tear drop fracture.
+7476,B32M45FLEX,B32,m,57,C4C5,flexion,flexibility,1,18/feb/2003,myocardial infarction,NA
+7477,B32M67EXTN,B32,m,57,C6C7,extension,flexibility,1,18/feb/2003,myocardial infarction,NA
+7478,B32M67FAIF,B32,m,57,C6C7,flexion,failure,7,18/feb/2003,myocardial infarction,disruption of disc and ligaments between c6-c7 with c6 fracture.
+7479,B32M67FLEX,B32,m,57,C6C7,flexion,flexibility,NA,18/feb/2003,myocardial infarction,NA
+7480,B32MO2EXTN,B32,m,57,C0C2,extension,flexibility,1,18/feb/2003,myocardial infarction,NA
+7481,B32MO2FAIF,B32,m,57,C0C2,flexion,failure,4,18/feb/2003,myocardial infarction,partial disruption of c1-c2 capsules and ligaments; dens disruption.
+7482,B32MO2FLEX,B32,m,57,C0C2,flexion,flexibility,1,18/feb/2003,myocardial infarction,NA
+7483,B33M45EXTN,B33,m,69,C4C5,extension,flexibility,1,20/feb/2003,colon cancer,NA
+7484,B33M45FAIE,B33,m,69,C4C5,extension,failure,7,20/feb/2003,colon cancer,disruption of disc and ligaments between c4-c5 with facet fracture.
+7485,B33M45FLEX,B33,m,69,C4C5,flexion,flexibility,NA,20/feb/2003,colon cancer,NA
+7486,B33M67EXTN,B33,m,69,C6C7,extension,flexibility,1,20/feb/2003,colon cancer,NA
+7487,B33M67FAIF,B33,m,69,C6C7,flexion,failure,7,20/feb/2003,colon cancer,disruption of disc and ligaments between c6-c7 with c6 fracture.
+7488,B33M67FLEX,B33,m,69,C6C7,flexion,flexibility,NA,20/feb/2003,colon cancer,NA
+7489,B33MO2EXTN,B33,m,69,C0C2,extension,flexibility,1,20/feb/2003,colon cancer,NA
+7490,B33MO2FAIE,B33,m,69,C0C2,extension,failure,4,20/feb/2003,colon cancer,type iii dens fracture at the fixation.
+7491,B33MO2FLEX,B33,m,69,C0C2,flexion,flexibility,NA,20/feb/2003,colon cancer,NA
+7492,B34M45EXTN,B34,m,58,C4C5,extension,flexibility,1,25/feb/2003,myocardial infarction,NA
+7493,B34M45FAIF,B34,m,58,C4C5,flexion,failure,7,25/feb/2003,myocardial infarction,disruption of posterior ligaments;anterior ligaments & capsules intact
+7494,B34M45FLEX,B34,m,58,C4C5,flexion,flexibility,NA,25/feb/2003,myocardial infarction,NA
+7495,B34M67EXTN,B34,m,58,C6C7,extension,flexibility,1,25/feb/2003,myocardial infarction,NA
+7496,B34M67FAIE,B34,m,58,C6C7,extension,failure,7,25/feb/2003,myocardial infarction,disruption of disc and ligaments between c6-c7 with fracture.
+7497,B34M67FLEX,B34,m,58,C6C7,flexion,flexibility,1,25/feb/2003,myocardial infarction,NA
+7498,B34MO2EXTN,B34,m,58,C0C2,extension,flexibility,1,25/feb/2003,myocardial infarction,NA
+7499,B34MO2FAIF,B34,m,58,C0C2,flexion,failure,4,25/feb/2003,myocardial infarction,type iii dens fracture.
+7500,B34MO2FLEX,B34,m,58,C0C2,flexion,flexibility,1,25/feb/2003,myocardial infarction,NA
+7501,B35M45EXTN,B35,m,64,C4C5,extension,flexibility,NA,27/feb/2003,myocardial infarction,NA
+7502,B35M45FAIE,B35,m,64,C4C5,extension,failure,7,27/feb/2003,myocardial infarction,complete disruption of disc and ligaments between c4-c5.
+7503,B35M45FLEX,B35,m,64,C4C5,flexion,flexibility,NA,27/feb/2003,myocardial infarction,NA
+7504,B35M67EXTN,B35,m,64,C6C7,extension,flexibility,NA,27/feb/2003,myocardial infarction,NA
+7505,B35M67FAIF,B35,m,64,C6C7,flexion,failure,7,27/feb/2003,myocardial infarction,complete disruption of disc and ligaments between c6-c7.
+7506,B35M67FLEX,B35,m,64,C6C7,flexion,flexibility,1,27/feb/2003,myocardial infarction,NA
+7507,B35MO2EXTN,B35,m,64,C0C2,extension,flexibility,1,27/feb/2003,myocardial infarction,NA
+7508,B35MO2FAIE,B35,m,64,C0C2,extension,failure,4,27/feb/2003,myocardial infarction,type iii dens fracture at the fixation.

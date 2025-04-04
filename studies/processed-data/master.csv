@@ -1,0 +1,78 @@
+new_id,test_id,ref_id,sample_id,sex,age,level,loading,test,ascii_id,date,cod,r3
+4394e,4394,B03F34FLEX,B03,Female,51,C3C4,Extension,flexibility,1.0,24/mar/1998,renal failure,10.124889830508474
+4394f,4394,B03F34FLEX,B03,Female,51,C3C4,Flexion,flexibility,1.0,24/mar/1998,renal failure,11.329246376811597
+4396e,4396,B03F56FLEX,B03,Female,51,C5C6,Extension,flexibility,1.0,24/mar/1998,renal failure,10.920520518358533
+4396f,4396,B03F56FLEX,B03,Female,51,C5C6,Flexion,flexibility,1.0,24/mar/1998,renal failure,11.434591854419413
+4429e,4429,B04F34FLEX,B04,Female,46,C3C4,Extension,flexibility,1.0,31/mar/1998,,12.82436937895801
+4429f,4429,B04F34FLEX,B04,Female,46,C3C4,Flexion,flexibility,1.0,31/mar/1998,,14.115560640732266
+4431e,4431,B04F56FLEX,B04,Female,46,C5C6,Extension,flexibility,1.0,31/mar/1998,,9.44680370942813
+4431f,4431,B04F56FLEX,B04,Female,46,C5C6,Flexion,flexibility,1.0,31/mar/1998,,15.700388174807197
+4911e,4911,B05F34FLEX,B05,Female,42,C3C4,Extension,flexibility,1.0,22/apr/1998,cva,7.432204778883508
+4911f,4911,B05F34FLEX,B05,Female,42,C3C4,Flexion,flexibility,1.0,22/apr/1998,cva,10.381389662720128
+4913e,4913,B05F56FLEX,B05,Female,42,C5C6,Extension,flexibility,1.0,22/apr/1998,cva,16.461675362948963
+4913f,4913,B05F56FLEX,B05,Female,42,C5C6,Flexion,flexibility,1.0,22/apr/1998,cva,10.242558924485126
+6349e,6349,B06F34FLEX,B06,Female,49,C3C4,Extension,flexibility,1.0,28/apr/1998,subarachnoid hemorrhage,6.596
+6349f,6349,B06F34FLEX,B06,Female,49,C3C4,Flexion,flexibility,1.0,28/apr/1998,subarachnoid hemorrhage,11.263492063492064
+6350e,6350,B06F56FLEX,B06,Female,49,C5C6,Extension,flexibility,1.0,28/apr/1998,subarachnoid hemorrhage,7.486645308924485
+6350f,6350,B06F56FLEX,B06,Female,49,C5C6,Flexion,flexibility,1.0,28/apr/1998,subarachnoid hemorrhage,13.733735357783411
+6366e,6366,B10F34FLEX,B10,Female,33,C3C4,Extension,flexibility,1.0,18/aug/1998,pneumonia,8.213991683991683
+6366f,6366,B10F34FLEX,B10,Female,33,C3C4,Flexion,flexibility,1.0,18/aug/1998,pneumonia,12.458680351906157
+6368e,6368,B10F56FLEX,B10,Female,33,C5C6,Extension,flexibility,1.0,18/aug/1998,pneumonia,7.631767972921434
+6368f,6368,B10F56FLEX,B10,Female,33,C5C6,Flexion,flexibility,1.0,18/aug/1998,pneumonia,14.061790921402888
+6374e,6374,B11F45FLEX,B11,Female,45,C4C5,Extension,flexibility,1.0,16/sep/1998,pulmonary embolism,14.209259171772349
+6374f,6374,B11F45FLEX,B11,Female,45,C4C5,Flexion,flexibility,1.0,16/sep/1998,pulmonary embolism,13.330708455922414
+6376e,6376,B11F67FLEX,B11,Female,45,C6C7,Extension,flexibility,1.0,16/sep/1998,pulmonary embolism,8.134268115942028
+6376f,6376,B11F67FLEX,B11,Female,45,C6C7,Flexion,flexibility,1.0,16/sep/1998,pulmonary embolism,15.848619490597953
+6380e,6380,B07F34FLEX,B07,Female,52,C3C4,Extension,flexibility,1.0,19/may/1998,cardiac arrest,11.272667587259004
+6380f,6380,B07F34FLEX,B07,Female,52,C3C4,Flexion,flexibility,1.0,19/may/1998,cardiac arrest,13.521394164759725
+6382e,6382,B07F56FLEX,B07,Female,52,C5C6,Extension,flexibility,1.0,19/may/1998,cardiac arrest,5.396638503373057
+6382f,6382,B07F56FLEX,B07,Female,52,C5C6,Flexion,flexibility,1.0,19/may/1998,cardiac arrest,17.61268305306977
+6452e,6452,B12F34FLEX,B12,Female,58,C3C4,Extension,flexibility,1.0,02/dec/1998,myocardial infarction/chronic obstructive pulmonary disease,8.82266533180778
+6452f,6452,B12F34FLEX,B12,Female,58,C3C4,Flexion,flexibility,1.0,02/dec/1998,myocardial infarction/chronic obstructive pulmonary disease,9.994826689148502
+6454e,6454,B12F56FLEX,B12,Female,58,C5C6,Extension,flexibility,1.0,02/dec/1998,myocardial infarction/chronic obstructive pulmonary disease,5.7117602591792656
+6454f,6454,B12F56FLEX,B12,Female,58,C5C6,Flexion,flexibility,1.0,02/dec/1998,myocardial infarction/chronic obstructive pulmonary disease,16.471980916030535
+6460e,6460,B13F34FLEX,B13,Female,52,C3C4,Extension,flexibility,1.0,06/jan/1999,cerebrovascular accident,3.3693267226036103
+6460f,6460,B13F34FLEX,B13,Female,52,C3C4,Flexion,flexibility,1.0,06/jan/1999,cerebrovascular accident,10.306008867276889
+6462e,6462,B13F56FLEX,B13,Female,52,C5C6,Extension,flexibility,1.0,06/jan/1999,cerebrovascular accident,6.887547673531655
+6462f,6462,B13F56FLEX,B13,Female,52,C5C6,Flexion,flexibility,1.0,06/jan/1999,cerebrovascular accident,13.174395308924485
+6466e,6466,B14F34FLEX,B14,Female,56,C3C4,Extension,flexibility,1.0,18/jan/1999,cardiopulmonary arrest,9.046578047042052
+6466f,6466,B14F34FLEX,B14,Female,56,C3C4,Flexion,flexibility,1.0,18/jan/1999,cardiopulmonary arrest,12.186448633024208
+6468e,6468,B14F56FLEX,B14,Female,56,C5C6,Extension,flexibility,1.0,18/jan/1999,cardiopulmonary arrest,8.908731080418438
+6468f,6468,B14F56FLEX,B14,Female,56,C5C6,Flexion,flexibility,1.0,18/jan/1999,cardiopulmonary arrest,9.433619938314596
+6474e,6474,B15F34FLEX,B15,Female,53,C3C4,Extension,flexibility,1.0,21/jan/1999,chronic obstructive pulmonary disease,8.910650553012967
+6474f,6474,B15F34FLEX,B15,Female,53,C3C4,Flexion,flexibility,1.0,21/jan/1999,chronic obstructive pulmonary disease,9.608988558352404
+6476e,6476,B15F56FLEX,B15,Female,53,C5C6,Extension,flexibility,1.0,21/jan/1999,chronic obstructive pulmonary disease,9.28205706813618
+6476f,6476,B15F56FLEX,B15,Female,53,C5C6,Flexion,flexibility,1.0,21/jan/1999,chronic obstructive pulmonary disease,11.71833867276888
+6482e,6482,B16F34FLEX,B16,Female,41,C3C4,Extension,flexibility,1.0,13/jul/1999,subarachnoid hemorrhage,5.243498680738786
+6482f,6482,B16F34FLEX,B16,Female,41,C3C4,Flexion,flexibility,1.0,13/jul/1999,subarachnoid hemorrhage,13.710586301369863
+6484e,6484,B16F56FLEX,B16,Female,41,C5C6,Extension,flexibility,1.0,13/jul/1999,subarachnoid hemorrhage,6.396131789357596
+6484f,6484,B16F56FLEX,B16,Female,41,C5C6,Flexion,flexibility,1.0,13/jul/1999,subarachnoid hemorrhage,12.234443617314586
+6356e,6356,B08M34FLEX,B08,Male,47,C3C4,Extension,flexibility,1.0,28/jul/1998,esophageal varices,4.376296398891967
+6356f,6356,B08M34FLEX,B08,Male,47,C3C4,Flexion,flexibility,1.0,28/jul/1998,esophageal varices,13.11816390160183
+6358e,6358,B08M56FLEX,B08,Male,47,C5C6,Extension,flexibility,1.0,28/jul/1998,esophageal varices,7.738044358387607
+6358f,6358,B08M56FLEX,B08,Male,47,C5C6,Flexion,flexibility,1.0,28/jul/1998,esophageal varices,7.73294055664946
+7398e,7398,B21M45EXTN,B21,Male,69,C4C5,Extension,flexibility,1.0,21/nov/2002,pulmonary embolism,9.956599644304436
+7400f,7400,B21M45FLEX,B21,Male,69,C4C5,Flexion,flexibility,1.0,21/nov/2002,pulmonary embolism,7.654237443657437
+7404e,7404,B22M45EXTN,B22,Male,56,C4C5,Extension,flexibility,1.0,25/nov/2002,cardiac arrest,9.988554169652527
+7406f,7406,B22M45FLEX,B22,Male,56,C4C5,Flexion,flexibility,1.0,25/nov/2002,cardiac arrest,7.128131413296778
+7407e,7407,B22M67EXTN,B22,Male,56,C6C7,Extension,flexibility,1.0,25/nov/2002,cardiac arrest,6.268119440961142
+7409f,7409,B22M67FLEX,B22,Male,56,C6C7,Flexion,flexibility,1.0,25/nov/2002,cardiac arrest,5.103203183682127
+7413e,7413,B23M45EXTN,B23,Male,65,C4C5,Extension,flexibility,1.0,04/dec/2002,myocardial infarction,8.250310989912737
+7415f,7415,B23M45FLEX,B23,Male,65,C4C5,Flexion,flexibility,1.0,04/dec/2002,myocardial infarction,6.632365896665857
+7422e,7422,B24M45EXTN,B24,Male,71,C4C5,Extension,flexibility,1.0,14/jan/2003,congestive heart failure,4.254035297399443
+7424f,7424,B24M45FLEX,B24,Male,71,C4C5,Flexion,flexibility,1.0,14/jan/2003,congestive heart failure,5.79747592906893
+7431e,7431,B25M45EXTN,B25,Male,74,C4C5,Extension,flexibility,1.0,16/jan/2003,subarachnoid hemorrhage,12.075930763699862
+7436f,7436,B25M67FLEX,B25,Male,74,C6C7,Flexion,flexibility,1.0,16/jan/2003,subarachnoid hemorrhage,7.081475052739027
+7445f,7445,B27M45FLEX,B27,Male,72,C4C5,Flexion,flexibility,1.0,28/jan/2003,cardiac arrest,10.340968422921254
+7452e,7452,B28M45EXTN,B28,Male,69,C4C5,Extension,flexibility,1.0,04/feb/2003,myocardial infarction,4.129114062270985
+7461e,7461,B30M45EXTN,B30,Male,51,C4C5,Extension,flexibility,1.0,11/feb/2003,myocardial infarction,9.066235906899497
+7465e,7465,B31M45EXTN,B31,Male,64,C4C5,Extension,flexibility,1.0,13/feb/2003,cardiopulmonary arrest,4.824992791973664
+7474e,7474,B32M45EXTN,B32,Male,57,C4C5,Extension,flexibility,1.0,18/feb/2003,myocardial infarction,7.145138644216978
+7476f,7476,B32M45FLEX,B32,Male,57,C4C5,Flexion,flexibility,1.0,18/feb/2003,myocardial infarction,8.795877538046572
+7477e,7477,B32M67EXTN,B32,Male,57,C6C7,Extension,flexibility,1.0,18/feb/2003,myocardial infarction,3.0607679137549546
+7483e,7483,B33M45EXTN,B33,Male,69,C4C5,Extension,flexibility,1.0,20/feb/2003,colon cancer,9.215428207309262
+7486e,7486,B33M67EXTN,B33,Male,69,C6C7,Extension,flexibility,1.0,20/feb/2003,colon cancer,3.2881175824066387
+7492e,7492,B34M45EXTN,B34,Male,58,C4C5,Extension,flexibility,1.0,25/feb/2003,myocardial infarction,7.239163719337792
+7495e,7495,B34M67EXTN,B34,Male,58,C6C7,Extension,flexibility,1.0,25/feb/2003,myocardial infarction,10.254378982734483
+7497f,7497,B34M67FLEX,B34,Male,58,C6C7,Flexion,flexibility,1.0,25/feb/2003,myocardial infarction,6.072190067474314
+7506f,7506,B35M67FLEX,B35,Male,64,C6C7,Flexion,flexibility,1.0,27/feb/2003,myocardial infarction,9.287788259137365
