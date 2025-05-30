@@ -22,6 +22,8 @@ This is a study of low-moment range of motion in male and female osteoligamentou
 
 4. Generally, some scaling for size must be included in such a study since this is likely a strong predictor of low moment motion.
     - Check for height and weight information in the NHTSA database
+    - (PD) These data are not recorded in the ASCII file/ NHTSA database. Height and weight data was found in pdf report for only one PMHS B03 (female). So wrote a python code to extract the data from all pdf reports if available. Check R1-hw-data.ipynb.
+    - (PD) Also screened all other papers published by Nightingale and Myers for any info, but its available only for PMHS used for tension tests. PMHS id used in bending tests were different from tension tests, Also in bending they were loaded till failure, so we can safely assume both were different PMHS.
 
 ### Results
 
@@ -48,6 +50,7 @@ This is a study of low-moment range of motion in male and female osteoligamentou
 
 11. “… may exhibit sex-dependent variations.” From a structural anthropometric point of view, males and females have size-dependent variations. Also, this is true within males and females. So, for such a low-moment study, it is essential to separate sex intrinsic variations and geometric variations. Specimen anthropometry is available for these tests. Using the gross anthropometry and segmental correlations of anthropometry and segmental length (and circumferences), some estimate of the size effect can be obtained.
     - Check for info in the data and if available include in the regression.
+    - (PD) One paper (https://www.sciencedirect.com/science/article/pii/S0021929006003289) contains the anthropometric data for the same PMHS, but only for upper cervical spine, none of those FSUs are used in this study as we are focusing only on lower cervical spine.
 
 
 Appendix
@@ -68,19 +71,23 @@ This study quantifies sex differences in cervical neck kinematics using retrospe
       - mentioned in appendix AII. Include a statement in methods
     - Were the ages of the PMHS similar across sex?
       - check in the data
+      - (PD) For male age varies from 47 to 74 (61.13 avg), For female age varies from 33 to 58 (48.16 avg)
     - Were there any inclusion/exclusion criteria that may influence the findings of this current paper (especially any cervical degeneration that may influence response)?
       - Check
+      - (PD) Nightingale didnt mention any of such findings in PMHS. But most of the COD were related to cardio, so there wont be any stuffs that would potentially influence the Spinal rotations i guess
     - Were data from all cervical segments referenced (C3-C4 and C5-C6 for females; C4-C5 and C6-C7 for males) combined in the Bayesian model? Are the degrees reported in the results an average across all segments? Your abstract states “segmental rotation” but you’re reporting only singular degree values when comparing males and females. Please clarify.
       - Check and Align wordings
 
 15. Please include the criteria or justification or rationale for your selection of “wider distributions” when defining the priors. How could this selection decision affect your results?
     - write more on prior selection
+    - (PD) Winkelstein used similar test apparatus and methodology like nightingale but tested for only Male PMHS at 2.5 Nm, as the bayesian model is for 3 Nm and also for comparing female, we chose wider prior.
 
 16. Results: The terms “rotation” and “flexion/extension” seem to be used interchangeably? I am confused by the use of segmental rotation in flexion and extension. What anatomical plane is segmental rotation being measured in? This again is likely discussed in the referenced papers but brief clarifications here and/or a figure demonstrating the results would help to interpret your analysis.
     - Add/align/review to make it easy for someone not familiar with cervical spine
 
 17. Discussion: It is important, in your discussion of IV disc and ligaments exhibiting sex-specific variation to include some discussion/interpretation based on age (and the age distributions of the males vs. females included).
     - Check if available in literature
+    - (PD) TODO
 
 18. Your findings are asymmetry in flexion/extension response but also between sexes. Are current HBMs allowing for cervical flexion and extension kinematics to be equal? Please elaborate and discuss further the implications of your work presented here.
     - Check validation reports from current HBMs
