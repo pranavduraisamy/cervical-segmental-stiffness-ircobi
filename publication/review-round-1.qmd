@@ -37,6 +37,9 @@ This is a study of low-moment range of motion in male and female osteoligamentou
 
 7. “for the group level-effect, extension and flexion responses for females are seen to be greater than males.” This is unclear. If it means that the extension and flexion angles for females to a given moment level are greater than males, with some anthropometric specifications), then this is likely generally true. However, some discussion of this would be nice here, including the likely observation that size differences play a role here.
    - Explain better and link with point #1
+   - (PD) As i mentioned in point 4, we lack the PMHS-specific anthropometric data from the chosen literature/database. 
+   - (PD) May be just for the sake of discussion we could use the winkelstein paper (Very less data though), Height shows some parabolic trend with rotation angle and weight have increasing slope. 
+   - (PD) When i chose BMI for generalisation, the slope for the flexion is changing wrt the cervical level, but not for extension. But we basically we couldnt conclude as the data chosen were very small (only 5)
 
 8. One additional limitation is repeated testing on these specimens. At 3 Nm, this is likely not a primary effect, but should be mentioned.
    - Add in Discussion/Results/Methods
@@ -67,6 +70,8 @@ This study quantifies sex differences in cervical neck kinematics using retrospe
 
 13. Introduction: what is the status of cervical neck biofidelity in current HBMs using the morphing techniques and/or limited experimental validation data? Are their biofidelity scores low with these approaches? Please expand on the practical effects for HBMs when sex is not considered in calibration/validation.
     - Add comments about current HBMs 
+    - (PD) https://www.ircobi.org/wordpress/downloads/irc16/pdf-files/116.pdf THUMS, they did C4-C5 validationn (with Nightingale male paper) using male specific material properties. Shown that 'THUMS  v4.02  AM50  (VPS)' C45 FSU performs poorly in 3.5Nm moment loading. The main idea is to ensure gender specific stiffness response.
+    - (PD) https://www.sciencedirect.com/science/article/pii/S0001457523002294 Though they scaled GHBMC F50 from GHBMC F05 (which is infact a scaled down male model, Disc 3rd para) Why they scale the mass to an average male (as they say in conclusion 1st para) ?
 
 14. Methods: It would be prudent to include some additional details for the retrospective data so that the reader does not have to search through refs 12 and 13 to understand if the boundary conditions were the same across the published data that were used:
     - did they change boundary conditions between tests/sex. It appears that different segmentation of the cervical vertebrae was used at the least.
@@ -89,10 +94,16 @@ This study quantifies sex differences in cervical neck kinematics using retrospe
 
 17. Discussion: It is important, in your discussion of IV disc and ligaments exhibiting sex-specific variation to include some discussion/interpretation based on age (and the age distributions of the males vs. females included).
     - Check if available in literature
-    - (PD) TODO
+    - (PD) Most of the papers i found were like relating the age/sex with level of disc degeneration but not with rotation angle.
+    - (PD) https://doi.org/10.1016/j.math.2009.08.006 Check discussion 5.1. Its lumbar, also data was collected from multiple studies.
+    - (PD) https://doi.org/10.3171/2015.1.SPINE14489 This paper speaks about age and sex differences but they just mentioned like they measured ROM, i am not clear about their methodology. It might be based upon just scan image data on the extreme postures in flexion and extension i guess.
+    - (PD) May be at some stage we have to admit that age might influence the rotation angle, but it depends on the PMHS majorly, can even be attributed to degeneration due to age. Still based upon our bayesian model, we could still argue that the effect of sex and loading mode were more dominant than age.
+    - (PD) Also those are live subjects, they might have asked to bend till its painful, Not like a standard testing apparatus used on a cadaver
 
 18. Your findings are asymmetry in flexion/extension response but also between sexes. Are current HBMs allowing for cervical flexion and extension kinematics to be equal? Please elaborate and discuss further the implications of your work presented here.
     - Check validation reports from current HBMs. Connect to 13.
+    - (PD) We didn't have any literature showing HBMs having same response on Extension and Flexion, But one thing we could say is THUMS didnt validate its cervical for this quasi static moment loading.
+    - (PD) moreover in 13, 1st paper they spoke only about Flexion. The author mentioned that the FSU is very stiff (approx. 2 deg. at 3.5 Nm). As it cannot hit the spinous process at that angle, we could expect the same in Extension too. I couldn't find any other literatures from the authors.
 
 19. Again, please clarify your use of the term “spinal rotations.” Are you using this interchangeably with flexion/extension movements?
     - Align/review terminology
