@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0" demote-non-dropping-particle="sort-only" default-locale="en-GB">
+  <!-- This style was edited with the Visual CSL Editor (https://editor.citationstyles.org/visualEditor/) -->
+  <info>
+    <title>IRCOBIstyle_pranav</title>
+    <title-short>IRCOBI</title-short>
+    <id>http://www.zotero.org/styles/ircobistyle_pranav</id>
+    <link href="http://www.zotero.org/styles/ircobistyle_pranav" rel="self"/>
+    <link href="http://www.zotero.org/styles/american-journal-of-climate-change" rel="template"/>
+    <link href="http://iubmb.onlinelibrary.wiley.com/hub/journal/10.1002/(ISSN)1539-3429/about/author-guidelines.html" rel="documentation"/>
+    <category citation-format="numeric"/>
+    <category field="biology"/>
+    <issn>1470-8175</issn>
+    <eissn>1539-3429</eissn>
+    <updated>2025-04-01T08:55:30+00:00</updated>
+    <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
+  </info>
+  <locale xml:lang="en">
+    <terms>
+      <term name="accessed">accessed on</term>
+    </terms>
+  </locale>
+  <macro name="author">
+    <names variable="author">
+      <name initialize-with=". " name-as-sort-order="all"/>
+      <label form="short" text-case="capitalize-first" prefix=", "/>
+      <substitute>
+        <names variable="editor"/>
+        <names variable="translator"/>
+      </substitute>
+    </names>
+  </macro>
+  <macro name="editor">
+    <names variable="editor">
+      <name initialize-with="." delimiter=", " delimiter-precedes-last="always"/>
+      <label form="short" prefix=" (" text-case="capitalize-first" suffix=")"/>
+    </names>
+  </macro>
+  <macro name="publisher">
+    <text variable="publisher" suffix=", "/>
+    <text variable="publisher-place"/>
+  </macro>
+  <macro name="year-date">
+    <choose>
+      <if variable="issued">
+        <date variable="issued">
+          <date-part name="year"/>
+        </date>
+      </if>
+      <else>
+        <text term="no date" form="short"/>
+      </else>
+    </choose>
+  </macro>
+  <macro name="edition">
+    <choose>
+      <if is-numeric="edition">
+        <group delimiter=" ">
+          <number variable="edition" form="ordinal"/>
+          <text term="edition" form="short"/>
+        </group>
+      </if>
+      <else>
+        <text variable="edition"/>
+      </else>
+    </choose>
+  </macro>
+  <citation collapse="citation-number">
+    <sort>
+      <key variable="citation-number"/>
+    </sort>
+    <layout delimiter="," prefix="[" suffix="]">
+      <text variable="citation-number"/>
+    </layout>
+  </citation>
+  <bibliography entry-spacing="0" second-field-align="flush" et-al-min="7" et-al-use-first="6">
+    <layout suffix=". ">
+      <text variable="citation-number" prefix="[" suffix="]"/>
+      <text macro="author" text-case="capitalize-first" prefix=" " suffix=" "/>
+      <choose>
+        <if type="article article-journal review" match="any">
+          <date date-parts="year" form="text" variable="issued" prefix="(" suffix=")"/>
+          <text variable="title" text-case="capitalize-first" prefix=" " suffix="."/>
+          <text variable="container-title" text-case="capitalize-first" font-style="italic" prefix=" " suffix=", "/>
+          <text variable="volume" text-case="capitalize-first" font-weight="bold"/>
+          <text variable="issue" text-case="capitalize-first" prefix="(" suffix="): "/>
+          <label text-case="lowercase" variable="page" form="short"/>
+          <text variable="page" suffix="."/>
+          <choose>
+            <if match="any" variable="DOI">
+              <text variable="DOI" form="short" text-case="lowercase" prefix=" doi: "/>
+            </if>
+            <else-if match="any" variable="URL">
+              <text variable="URL" prefix=" Available: "/>
+            </else-if>
+          </choose>
+        </if>
+        <else-if type="webpage" match="any">
+          <text variable="title" text-case="capitalize-first" quotes="false" prefix="&quot;" suffix="&quot;, "/>
+          <text variable="URL" suffix=" . "/>
+          <date form="text" variable="issued" prefix="[" suffix="]"/>
+        </else-if>
+        <else-if type="book chapter" match="any">
+          <date date-parts="year" form="text" variable="issued" prefix="(" suffix=") "/>
+          <text variable="title" text-case="capitalize-first" font-style="italic" suffix=", "/>
+          <choose>
+            <if match="any" variable="page">
+              <label text-case="lowercase" variable="page" form="short"/>
+              <text variable="page" suffix=","/>
+            </if>
+          </choose>
+          <text variable="publisher" text-case="capitalize-first" font-style="italic" prefix=" " suffix=","/>
+          <text variable="publisher-place" text-case="capitalize-first" prefix=" " suffix="."/>
+          <text variable="ISBN" prefix=" ISBN: "/>
+        </else-if>
+        <else-if type="paper-conference" match="any">
+          <date date-parts="year" form="text" variable="issued" prefix="(" suffix=") "/>
+          <text variable="title" text-case="capitalize-first" suffix=". "/>
+          <text value="Proceedings of " text-case="capitalize-first" font-style="italic"/>
+          <text variable="event" text-case="capitalize-first" font-style="italic" suffix=", "/>
+          <date date-parts="year" form="text" variable="event-date" suffix=", "/>
+          <text variable="event-place" text-case="capitalize-first" suffix="."/>
+        </else-if>
+        <else-if type="report thesis" match="any">
+          <date date-parts="year" form="text" variable="issued" prefix="(" suffix=") "/>
+          <text variable="publisher" text-case="capitalize-first" suffix=", "/>
+          <text variable="title" text-case="capitalize-first" font-style="italic" suffix=", "/>
+          <text variable="publisher-place" text-case="capitalize-first"/>
+        </else-if>
+      </choose>
+    </layout>
+  </bibliography>
+</style>
