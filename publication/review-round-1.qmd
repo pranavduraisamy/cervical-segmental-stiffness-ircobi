@@ -1,47 +1,65 @@
-# Reviews
+---
+title: "Response to Reviewers - Duraisamy et al., 2025,  IRCOBI"
+format:
+  pdf:
+    toc: false
+    number-sections: false
+    colorlinks: false
+    documentclass: scrartcl
+    papersize: letter
+---
 
 
 ## Reviewer 1
 
 
-This is a study of low-moment range of motion in male and female osteoligamentous cervical spine segments based on previous testing in the NHTSA database performed. In general, both the intrinsic and size differences between men and women are of substantial interest, but here, no attempt is made to differentiate size related differences through biomechanical scaling, and certain of the underlying assumptions are questionable and/or unspecified.
+
+**This is a study of low-moment range of motion in male and female osteoligamentous cervical spine segments based  on previous testing in the NHTSA database performed. In general, both the intrinsic and size differences between  men and women are of substantial interest, but here, no attempt is made to differentiate size related 
+differences through biomechanical scaling, and certain of the underlying assumptions are questionable and/or 
+unspecified.**
+
 
 ### Methods
 
-1.  At some point, the anatomical differences between female and male segments must be mentioned. Anatomically, the females are likely to be smaller AND the female FSUs are higher in the c-cpine in this dataset. Both are going to tend to exacerbate size-related differences in response to low moments and to injury response.
-  - Already mentioned in L128. Expand more on this discussion
+**1.  At some point, the anatomical differences between female and male segments must be mentioned. Anatomically, the females are likely to be smaller AND the female FSUs are higher in the c-cpine in this dataset. Both are going to tend to exacerbate size-related differences in response to low moments and to injury response.**
+
+  - Although we had already addressed these in the subsections "Limitations" and "Sex-dependent cervical spine biomechanics" in the Discussion, we understand it better to elaborate further on this to give a clearer picture to the reader. We have now expanded more on this with additional references in the section "Sex-dependent cervical spine biomechanics" and added a comment on the cervical spine segments available in the dataset in the "Limitations". 
 
 
-2. “The hyperprior is given by …”. It’s unclear why the prior for a male/female comparison comes from a male study as opposed to just using an uninformed prior. Or something else. Please specify what part of [14] was used for the priors since it is experimental and computational. If the experiments from [14] are used, are these some of the same experiments reported in [12]? Please clarify.
-  - Hyperprior specifies distribution for flexion and extension (not sex-specific priors)
-  - [14] experimental is used from appendix, study contained only male samples. [12] contains only female samples
-  - [12] check in the methods anc compare with [14]
-  - We also checked if [13] and [14] contain the same experiments. The cervical spine levels used in the two studies are different and hence can be concluded that it is not the same samples.
-  - prior predictive distribution is shown in Figure A3 and is defined as weakly informed priors
+**2. “The hyperprior is given by …”. It’s unclear why the prior for a male/female comparison comes from a male study as opposed to just using an uninformed prior. Or something else. Please specify what part of [14] was used for the priors since it is experimental and computational. If the experiments from [14] are used, are these some of the same experiments reported in [12]? Please clarify.**
 
-3. Some of the distribution assumptions seem unnecessary if Bayesian nonparametric modelling is used.
-  - We are using parametric linear regression 
+- Even though the priors come from a male study, the parameters were defined such that prior is a weakly informative prior. The purpose of a weakly informative prior was to center the prior distributions. We have now added an additional figure in the appendix to show this (Fig A3). If anything, a weakly informative prior in this case will lead to conservative results. With the lack of additional experimental sources and with the lack information in this source as indicated in our responses to #1 [TODO], we can safely assume that specification of the current prior does not affect the conclusion of the study. 
+- Hyperprior specifies distribution for flexion and extension (not sex-specific priors)
+- experimental data from appendix of [14] is used in this paper. This study consisted of only male samples. [12] contains only female samples and hence we can conclude that they are not the same experiments.
+- We also checked if [13] and [14] contain the same experiments. The cervical spine levels used in the two studies are different and hence can be concluded that it is not the same samples. Also, the studies acknowledge different funders.
 
-4. Generally, some scaling for size must be included in such a study since this is likely a strong predictor of low moment motion.
-    - Check for height and weight information in the NHTSA database
-    - (PD) These data are not recorded in the ASCII file/ NHTSA database. Height and weight data was found in pdf report for only one PMHS B03 (female). So wrote a python code to extract the data from all pdf reports if available. Check R1-hw-data.ipynb.
-    - (PD) Also screened all other papers published by Nightingale and Myers for any info, but its available only for PMHS used for tension tests. PMHS id used in bending tests were different from tension tests, Also in bending they were loaded till failure, so we can safely assume both were different PMHS.
+**3. Some of the distribution assumptions seem unnecessary if Bayesian nonparametric modelling is used.**
+
+- We are using parametric linear regression (shown in equation 1)
+
+**4. Generally, some scaling for size must be included in such a study since this is likely a strong predictor of low moment motion.**
+
+- The initial plan for our study was to include anthropometric and morphological variables in the analysis. However, these are not recorded in the NHTSA database for these experiments. Height and weight data was found in pdf report for only one PMHS B03 (female). 
+- All other papers published by Nightingale and Myers were checked to see if any related information could be extracted. Such information is available only for PMHS used for tension tests. PMHS id used in bending tests were different from tension tests, 
 
 ### Results
 
-5. The Bayesian model specification should be in the methods.
-  - TODO: move to Methods
+**5. The Bayesian model specification should be in the methods.**
 
-6. “The posterior distribution was verified using various checks.” Please specify what this means. What checks, and what constituted verification in this case.
+- Thank you this is moved the methods
+
+**6. “The posterior distribution was verified using various checks.” Please specify what this means. What checks, and what constituted verification in this case.**
+
   - Already described in the Appendix. Add pointers in the main text
 
-7. “for the group level-effect, extension and flexion responses for females are seen to be greater than males.” This is unclear. If it means that the extension and flexion angles for females to a given moment level are greater than males, with some anthropometric specifications), then this is likely generally true. However, some discussion of this would be nice here, including the likely observation that size differences play a role here.
+**7. “for the group level-effect, extension and flexion responses for females are seen to be greater than males.” This is unclear. If it means that the extension and flexion angles for females to a given moment level are greater than males, with some anthropometric specifications), then this is likely generally true. However, some discussion of this would be nice here, including the likely observation that size differences play a role here.**
    - Explain better and link with point #1
    - (PD) As i mentioned in point 4, we lack the PMHS-specific anthropometric data from the chosen literature/database. 
    - (PD) May be just for the sake of discussion we could use the winkelstein paper (Very less data though), Height shows some parabolic trend with rotation angle and weight have increasing slope. 
    - (PD) When i chose BMI for generalisation, the slope for the flexion is changing wrt the cervical level, but not for extension. But we basically we couldnt conclude as the data chosen were very small (only 5)
 
-8. One additional limitation is repeated testing on these specimens. At 3 Nm, this is likely not a primary effect, but should be mentioned.
+**9. One additional limitation is repeated testing on these specimens. At 3 Nm, this is likely not a primary effect, but should be mentioned.**
+
    - Add in Discussion/Results/Methods
 
 ### Discussion
