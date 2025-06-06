@@ -23,7 +23,7 @@ unspecified.**
 
 **1.  At some point, the anatomical differences between female and male segments must be mentioned. Anatomically, the females are likely to be smaller AND the female FSUs are higher in the c-cpine in this dataset. Both are going to tend to exacerbate size-related differences in response to low moments and to injury response.**
 
-  - Although we had already addressed these in the subsections "Limitations" and "Sex-dependent cervical spine biomechanics" in the Discussion, we understand it better to elaborate further on this to give a clearer picture to the reader. We have now expanded more on this with additional references in the section "Sex-dependent cervical spine biomechanics" and added a comment on the cervical spine segments available in the dataset in the "Limitations". 
+- We had already addressed these in the subsections "Limitations" and "Sex-dependent cervical spine biomechanics" in the Discussion, but we understand it better to elaborate further on this to give a clearer picture to the reader. We have now expanded more on this with additional references in the section "Sex-dependent cervical spine biomechanics" and added a comment on the cervical spine segments available in the dataset in the "Limitations". 
 
 
 **2. “The hyperprior is given by …”. It’s unclear why the prior for a male/female comparison comes from a male study as opposed to just using an uninformed prior. Or something else. Please specify what part of [14] was used for the priors since it is experimental and computational. If the experiments from [14] are used, are these some of the same experiments reported in [12]? Please clarify.**
@@ -35,51 +35,59 @@ unspecified.**
 
 **3. Some of the distribution assumptions seem unnecessary if Bayesian nonparametric modelling is used.**
 
-- We are using parametric linear regression (shown in equation 1)
+- We are using parametric linear regression (shown in equation 1) and we have assumed normal distributions for all the parameters.
 
 **4. Generally, some scaling for size must be included in such a study since this is likely a strong predictor of low moment motion.**
 
 - The initial plan for our study was to include anthropometric and morphological variables in the analysis. However, these are not recorded in the NHTSA database for these experiments. Height and weight data was found in pdf report for only one PMHS B03 (female). 
-- All other papers published by Nightingale and Myers were checked to see if any related information could be extracted. Such information is available only for PMHS used for tension tests. PMHS id used in bending tests were different from tension tests, 
+- All other papers published by Nightingale and Myers were checked to see if any related information could be extracted. Such information is available only for PMHS used for tension tests. PMHS id used in bending tests were different from tension tests, and hence are not the same samples.
+- The study we used to define priors reported the anthropometry of the individuals from who the samples were tested. We have now made an exploratory data visualization to compare the rotations at 3Nm with respect to height, mass, and BMI. No relationships can be seen visually. 
 
 ### Results
 
 **5. The Bayesian model specification should be in the methods.**
 
-- Thank you this is moved the methods
+- Thank you, this is moved the methods
 
 **6. “The posterior distribution was verified using various checks.” Please specify what this means. What checks, and what constituted verification in this case.**
 
-  - Already described in the Appendix. Add pointers in the main text
+- The lines that followed this statement was meant to direct the reader to the appendix for details about these verifications. We now describe this in some more detail to be clearer.
+- R_hat and Effective Sample Size (ESS) was used to evaluate the sampling. We have not included this in the main text, along with the reference to the algorithm. `Vehtari, Aki, Andrew Gelman, Daniel Simpson, Bob Carpenter, and Paul-Christian Bürkner. "Rank-normalization, folding, and localization: An improved R ̂ for assessing convergence of MCMC (with discussion)." Bayesian analysis 16, no. 2 (2021): 667-718.`
 
 **7. “for the group level-effect, extension and flexion responses for females are seen to be greater than males.” This is unclear. If it means that the extension and flexion angles for females to a given moment level are greater than males, with some anthropometric specifications), then this is likely generally true. However, some discussion of this would be nice here, including the likely observation that size differences play a role here.**
-   - Explain better and link with point #1
-   - (PD) As i mentioned in point 4, we lack the PMHS-specific anthropometric data from the chosen literature/database. 
-   - (PD) May be just for the sake of discussion we could use the winkelstein paper (Very less data though), Height shows some parabolic trend with rotation angle and weight have increasing slope. 
-   - (PD) When i chose BMI for generalisation, the slope for the flexion is changing wrt the cervical level, but not for extension. But we basically we couldnt conclude as the data chosen were very small (only 5)
+
+- This statement was meant to point to the posterior distributions of the coeefficients (Figure 1). We have updated this in the manuscript
+- In general, the female segments can be expected to be more flexible. The purpose of this study was to quantify how different they and in the process we found that it is more different in flexion than extension (which is explained in the next paragraph in the manuscript)
+- We agree size differences will play a role. Unfortunately as most of these studies do not report either anthropometry or local morphological dimensions, it is a challenge to do any quantification in the analysis. This relates to our response to question #1, and we have expanded on this in the manuscript in the discussion section.
+- We have also provided visualization from the only study where we found anthropometric variables reported (Fig A10)
+
 
 **9. One additional limitation is repeated testing on these specimens. At 3 Nm, this is likely not a primary effect, but should be mentioned.**
 
-   - Add in Discussion/Results/Methods
+- Thank you. We agree it is important to give this context to the reader and we have now included this in the methods (line 50)
 
 ### Discussion
 
-9. “… male … has overlapping distributions … female … did not show … overlap”. Likely a part of this is the size differences and the moment angle relative to the overall range of motion in an osteoligamentous c-spine in flexion. The increase in extension moment happens nearer in angle to the nominal position than the flexion. One thing more difficult to understand is why the distributions do not widen in the flexion cases and seem approximately the same as in the extension case.
-   - Distributions of the rotations are at constant moment of 3Nm. 
-   - The distribution represents the uncertainty in data an variations in the responses from the PMHS samples and doesn't necessarily have to do with flexion or extension loading modes.
+**10. “… male … has overlapping distributions … female … did not show … overlap”. Likely a part of this is the size differences and the moment angle relative to the overall range of motion in an osteoligamentous c-spine in flexion. The increase in extension moment happens nearer in angle to the nominal position than the flexion. One thing more difficult to understand is why the distributions do not widen in the flexion cases and seem approximately the same as in the extension case.**
 
-10. “… could perhaps…” This is well known. In fact, it is quite difficult to injure the neck in pure flexion moment before facial structures contact the torso. In contrast, extension moments load the c-spine to failure at relatively small angles.
-     - The comment here was about the sex-differences in physiological range-of-motion and not about the responses to injurious loading
-
-11. “… may exhibit sex-dependent variations.” From a structural anthropometric point of view, males and females have size-dependent variations. Also, this is true within males and females. So, for such a low-moment study, it is essential to separate sex intrinsic variations and geometric variations. Specimen anthropometry is available for these tests. Using the gross anthropometry and segmental correlations of anthropometry and segmental length (and circumferences), some estimate of the size effect can be obtained.
-    - Check for info in the data and if available include in the regression.
-    - (PD) One paper (https://www.sciencedirect.com/science/article/pii/S0021929006003289) contains the cervical morphological data for the same PMHS, but only for upper cervical spine, none of those FSUs are used in this study as we are focusing only on lower cervical spine.
+- with the statement "the male flexion and extension has overlapping distributions, the female responses did not show similar overlap" we intended to describe the asymmetry we saw for flexion and extension in females. Males had a similar distribution for extension and flexion at 3Nm, but this was not the case for females.
+- The distributions capture the variations between the samples and the uncertainty in the experiments at a moment loading of 3Nm. This may not necessarily need to be different between flexion and extension. In the male distributions (Fig 2), the distribution for flexion can be seen to be slightly wider than extension.
 
 
-Appendix
+**11. “… could perhaps…” This is well known. In fact, it is quite difficult to injure the neck in pure flexion moment before facial structures contact the torso. In contrast, extension moments load the c-spine to failure at relatively small angles.**
 
-12. “… there were 48 female and 29 male FSUs…”. Please clarify these are tests, using 16 female and 16 male spine as in the studies. They are not independent spines.
-    - Good point. Update this one
+- We agree, but we were trying to discuss here why female extension is similar to male extension, while female flexion is not similar to male flexion in physiological range-of-motion at subinjurious bending moment. We have now expanded on the description in this paragraph to better discuss this.
+
+**12. “… may exhibit sex-dependent variations.” From a structural anthropometric point of view, males and females have size-dependent variations. Also, this is true within males and females. So, for such a low-moment study, it is essential to separate sex intrinsic variations and geometric variations. Specimen anthropometry is available for these tests. Using the gross anthropometry and segmental correlations of anthropometry and segmental length (and circumferences), some estimate of the size effect can be obtained.**
+
+We agree. The initial intention of the study was to consider all influence of geometry variation and anthropometry variables. However, as described in our responses to **#4** we did not find this information neither in the NHTSA database or related publications. Even with the lack of these information, we want to highlight that the male and female segmental responses are different. Female are shorter than males, and consequently have a different anthropometry which needs to be considered in computational models.
+
+
+### Appendix
+
+**13. “… there were 48 female and 29 male FSUs…”. Please clarify these are tests, using 16 female and 16 male spine as in the studies. They are not independent spines.**
+
+- Thanks. This was mentioned in the methods initially and we have added it to the Appendix also.
 
 
 ## Reviewer 2
