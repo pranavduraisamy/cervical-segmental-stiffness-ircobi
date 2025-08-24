@@ -1,0 +1,6 @@
+.slide-logo {
+  height: 100px !important;
+  max-width: unset !important;
+  max-height: unset !important;
+  z-index: -999 !important;
+}
