@@ -68,23 +68,25 @@ Just matching the anthropometry is not enough for a FE Model, We have to validat
 ![](assets/nightingale2007.jpg){.fragment .absolute width="500" top="12%" left="15%"}
 
 ![](assets/nightingale2002.jpg){.fragment .absolute width="500" top="40%" left="27%"}
+
 :::
 
 ## A Bit of Background... {visibility="uncounted"}
 
 ::::: columns
+
 :::: {.column width="60%"}
 
 ::: {style="font-size: 0.8em;"}
 -   Both studies are identical, differing only in sex of the specimens used
--   Unembalmed cadavers, Adjacent segments were lost during sectioning
--   Flexibility Tests (Max. 3.5Nm) & Failure Tests (Loaded till failure)
+-   Unembalmed PMHS, Adjacent segments were lost during sectioning
+-   Pure Moment Loads - Flexibility Tests (Max. 3.5Nm) & Failure Tests
 :::
 
-::: {.callout-note}
-Male -  O–C3, C4–C5, and C6–C7
+::: {.callout-note title="Mostly FSUs were segmented into..."}
+Male → O-C3, [C4-C5 & C6-C7]{style="color:dodgerblue;"}
 
-Female - O-C2, C3-C4, C5-C6, and C7-T1
+Female → O-C2, [C3-C4, C5-C6 & C7-T1]{style="color:deeppink;"}
 :::
 
 ::::
@@ -93,7 +95,6 @@ Female - O-C2, C3-C4, C5-C6, and C7-T1
 <br/>
 
 ![Schematic of experimental apparatus by Nightingale et al.,](assets/nightingale-schematic.jpg)
-
 ::::
 
 :::::
@@ -102,9 +103,14 @@ Female - O-C2, C3-C4, C5-C6, and C7-T1
 meow meow
 :::
 
-# Method
+# Methods
 
-## Data Extraction
+## Data Extraction {.smaller}
+
+- Extracted reports and ASCII data from NHTSA database using API
+- Consists of spine segments from [16 female and 16 male PMHS]{.fragment .highlight-red}
+- After filtering and processing, there were [48 female and 29 male FSUs]{.fragment .highlight-red}
+- Out of which [36 are tested for flexion while 41 are tested for extension]{.fragment .highlight-red} 
 
 ::: {.callout-tip title="Inclusion Criteria"}
 -   Flexibility Tests
@@ -116,23 +122,210 @@ meow meow
 meow meow
 :::
 
-## Exploratory Data Analysis
+## Exploratory Data Analysis{.smaller}
+
+:::: columns
+
+::: {.column width=65%}
+![Count Data](assets/count-data.jpg)
+:::
+
+::: {.column width=34%}
+![Box Plot of Segmental Rotations at 3Nm](assets/box-plot-eda.jpg)
+:::
+
+::::
 
 ::: notes
 meow meow
 :::
 
-## Bayesian Analysis - In short
+## Bayesian Analysis - In a nutshell
+
+
+##### Basic idea behind Linear Regression
+
+::: r-stack
+
+![](assets/lr-stack1.png){.fragment .fade-in-then-out .absolute height="450" top="18%" left="1%"}
+
+![](assets/lr-stack2.png){.fragment .fade-in-then-out .absolute height="450" top="18%" left="1%"}
+
+![](assets/lr-stack3.png){.fragment .fade-in-then-out .absolute height="450" top="18%" left="1%"}
+
+![](assets/lr-stack4.png){.fragment .fade-in-then-out .absolute height="450" top="18%" left="1%"}
+
+:::
+
 
 ::: notes
 meow meow
+:::
+
+## Bayesian Analysis - In a nutshell {visibility="uncounted" auto-animate="true" auto-animate-unmatched="slide"}
+
+##### Doing it in a Bayesian way...
+
+::::: columns
+:::: {.column width="50%" style="font-size: 80%;"}
+
+<br/>
+
+\begin{align} 
+\alpha &\sim \text{a prior}\\
+\beta &\sim \text{another prior}\\
+\sigma &\sim \text{some other prior}\\
+\mu &= \alpha + \beta X\\
+Y &\sim \operatorname{N}(\mu,~\sigma)\\
+Y &\sim \operatorname{N}(\mu = \alpha + \beta X,~\sigma)\\
+\end{align}
+
+::::
+
+:::: {.column width="45%"}
+![Bayesian Linear Regression Model](assets/lr-bayes.jpg)
+::::
+:::::
+
+::: aside 
+Adapted from *Bayesian Analysis with Python by Oswaldo Martin*
+:::
+
+::: notes
+meow meow
+:::
+
+## Bayesian Model Building {.r-fit-text}
+
+:::::: columns
+::::: {.column width="50%" style="font-size: 60%;"}
+
+\begin{align}
+L_i &= \text{Coeff. for loading mode}\\
+
+l_{ij} &= \text{Coeff. for loading mode specific to sex}\\
+
+E &= \text{Residual random error}\\
+
+R &=\text{Segmental Rotation angle at 3Nm}\\
+
+\end{align}
+
+:::: r-stack
+
+:::{.fragment .fade-in-then-out fragment-index=1 style="color: #004030;"}
+
+### Common Effect
+
+$$ 
+L_{i} \sim \operatorname{Normal}(\mu_{i},~\sigma_{i}) 
+$$
+
+$$
+\mu_{i} = 
+\left\{ 
+    \begin{array}{ll}
+        5.3 & \textrm{for Extension} \\
+        5.8 & \textrm{for Flexion} 
+    \end{array}
+\right.
+$$
+
+$$
+\sigma_{i} = 
+\left\{ 
+    \begin{array}{ll}
+        2.3 & \textrm{for Extension} \\
+        2.9 & \textrm{for Flexion}
+    \end{array}
+\right.
+$$
+:::
+
+:::{.fragment .fade-in-then-out fragment-index=2 style="color: #2F5249;"}
+
+### Group-level Effect
+
+$$ 
+l_{ij} \sim \operatorname{Normal}(0,~\sigma_{l_{i}}) 
+$$
+
+:::
+
+:::{.fragment .fade-in-then-out fragment-index=3 style="color: #437057;"}
+
+### Hyperprior
+
+$$ \sigma_{l_{i}} \sim \operatorname{HalfNormal}(\tau_{i}) $$
+
+$$
+\tau_{i} = 
+\left\{ 
+    \begin{array}{ll}
+        2.3 & \textrm{for Extension} \\
+        2.9 & \textrm{for Flexion}
+    \end{array}
+\right.
+$$
+
+:::
+
+:::{.fragment .fade-in-then-out fragment-index=4 style="color: #97B067;"}
+
+### Residual Error
+
+$$ E \sim \operatorname{Normal}(0,~\sigma_{E}) $$
+
+$$ \sigma_{E} \sim \operatorname{HalfStudentT}(\nu,~\sigma) $$
+
+where $\nu$ = 4, $\sigma$ = 3.4
+
+:::
+
+:::{.fragment .fade-in-then-out fragment-index=5 style="color: #FFCC00;"}
+
+### Likelihood & Posterior
+
+$$ R = L_{i} + l_{ij} + E $$
+
+:::
+
+::::
+
+:::::
+
+::::: {.column width="45%"}
+![Bayesian Linear Regression Model](assets/bayesian-model.jpg)
+
+::: {data-id="box1" style="background: #ffffff00; width: 125px; height: 110px; position: absolute; top: 215px; left: 527px; border: 5px solid #004030; border-radius: 15px; z-index:30" .fragment .fade-in-then-out fragment-index=1}
+:::
+
+::: {data-id="box2" style="background: #ffffff00; width: 185px; height: 240px; position: absolute; top: 85px; left: 665px; border: 5px solid #2F5249; border-radius: 15px; z-index:30" .fragment .fade-in-then-out fragment-index=2}
+:::
+
+::: {data-id="box3" style="background: #ffffff00; width: 125px; height: 110px; position: absolute; top: 85px; left: 725px; border: 5px solid #437057; border-radius: 15px; z-index:30" .fragment .fade-in-then-out fragment-index=3}
+:::
+
+::: {data-id="box4" style="background: #ffffff00; width: 180px; height: 240px; position: absolute; top: 85px; left: 800px; border: 5px solid #97B067; border-radius: 15px; z-index:30" .fragment .fade-in-then-out fragment-index=4}
+:::
+
+::: {data-id="box5" style="background: #ffffff00; width: 120px; height: 175px; position: absolute; top: 400px; left: 672px; border: 5px solid #FFCC00; border-radius: 15px; z-index:30" .fragment .fade-in-then-out fragment-index=5}
+:::
+
+:::::
+
+::::::
+
+::: notes
+meow meow 
 :::
 
 ## Bayesian Model Building
 
-::: notes
-meow meow
-:::
+- Bambi v0.14.0 (python package) was used for building the Bayesian models
+- Used weakly informative priors from other studies ^[Winkelstein et al., (2000)]
+- Sampled using MCMC NUTS sampler in 4 chains, each with 1500 draws
+- Posterior predictive distributions were used for comparing the responses
 
 # Results
 
