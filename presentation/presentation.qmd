@@ -9,6 +9,7 @@ format:
         footer: Comparison of Flexion–Extension Responses between Male and Female sub-Axial Cervical Spine Segments
         transition: slide
         transition-speed: default
+        chalkboard: true
 ---
 
 ## ![](assets/title-logos.png) {background-color="white"}
@@ -278,7 +279,7 @@ $$ E \sim \operatorname{Normal}(0,~\sigma_{E}) $$
 
 $$ \sigma_{E} \sim \operatorname{HalfStudentT}(\nu,~\sigma) $$
 
-where $\nu$ = 4, $\sigma$ = 3.4
+$$ \nu = 4, \sigma = 3.4 $$
 
 :::
 
@@ -327,10 +328,160 @@ meow meow
 - Sampled using MCMC NUTS sampler in 4 chains, each with 1500 draws
 - Posterior predictive distributions were used for comparing the responses
 
-# Results
+# Results & Discussion
 
-## Res
+## Posterior Distributions
+
+::::: columns
+
+:::: {.column width="40%"}
+
+<br/> 
+<br/> 
+
+::: {.callout-tip title="What is posterior?" .fragment .fade-out fragment-index=1}
+-   Probability distribution for the parameters in our model after sampling
+-   Reflects all we know about the problem
+:::
+
+::: {data-id="txt1" style="font-size: 0.9em; text-align: right; position: absolute; top: 138px; left: 121px;" .fragment .fade-in fragment-index=1}
+Residual Error
+:::
+
+::: {data-id="txt2" style="font-size: 0.9em; text-align: right; position: absolute; top: 220px; left: 102px;" .fragment .fade-in fragment-index=2}
+Common Effect
+:::
+
+::: {data-id="txt3" style="font-size: 0.9em; text-align: right; position: absolute; top: 335px; left: 172px;" .fragment .fade-in fragment-index=3}
+Hyperprior
+:::
+
+::: {data-id="txt4" style="font-size: 0.9em; text-align: right; position: absolute; top: 485px; left: 63px;" .fragment .fade-in fragment-index=4}
+Group-level Effect
+:::
+
+::::
+
+
+:::: {.column width="60%"}
+
+![&nbsp; &nbsp; Forest Plot](assets/forest-plot.png){height="540"}
+
+::::
+
+::: {.gradient-border-box .absolute top="152" left="390" height="35" width="450" .fragment .fade-in fragment-index=1}
+:::
+
+::: {.gradient-border-box .absolute top="220" left="390" height="74" width="450" .fragment .fade-in fragment-index=2}
+:::
+
+::: {.gradient-border-box .absolute top="332" left="390" height="74" width="450" .fragment .fade-in fragment-index=3}
+:::
+
+::: {.gradient-border-box .absolute top="442" left="390" height="158" width="450" .fragment .fade-in fragment-index=4}
+:::
+
+:::::
+
+::: notes
+poterior is the result of baye ana. & reflects all we know about the problem. post is just a updated prior due to sampling in the light of a new data (fit data/ training data)
+:::
+
+## Contrast b/w Flexion & Extension
+
+::::: columns
+
+:::: {.column width="30%"}
+
+![](assets/intact.png){.absolute height="330" width="330" top="8%" left="1%" .fragment .fade-out fragment-index=1}
+
+![](assets/intact.png){.absolute height="330" width="330" top="48%" left="1%" .fragment .fade-out fragment-index=1}
+
+::: r-stack
+
+![](assets/fig1-p1.png){.fragment .fade-in-then-out .absolute height="330" width="330" top="8%" left="1%" fragment-index=1}
+
+![](assets/fig1-p2.png){.fragment .fade-in .absolute height="330" width="330" top="8%" left="1%" fragment-index=2}
+
+![](assets/fig2-p1.png){.fragment .fade-in-then-out .absolute height="330" width="330" top="48%" left="1%" fragment-index=1}
+
+![](assets/fig2-p2.png){.fragment .fade-in .absolute height="330" width="330" top="48%" left="1%" fragment-index=2}
+
+:::
+
+::::
+
+:::: {.column width="70%"}
+
+![](assets/contrast-sexwise.png){height="525"}
+
+::::
+
+:::::
+
+::: aside
+
+FSU figures are for illustrative purpose only!
+
+:::
 
 ::: notes
 meow meow
 :::
+
+## Contrast b/w Female & Male
+
+::::: columns
+
+:::: {.column width="30%"}
+
+![](assets/intact.png){.absolute height="330" width="330" top="8%" left="1%" .fragment .fade-out fragment-index=1}
+
+![](assets/intact.png){.absolute height="330" width="330" top="48%" left="1%" .fragment .fade-out fragment-index=1}
+
+::: r-stack
+
+![](assets/fig3-p1.png){.fragment .fade-in-then-out .absolute height="330" width="330" top="8%" left="1%" fragment-index=1}
+
+![](assets/fig3-p2.png){.fragment .fade-in .absolute height="330" width="330" top="8%" left="1%" fragment-index=2}
+
+![](assets/fig4-p1.png){.fragment .fade-in-then-out .absolute height="330" width="330" top="48%" left="1%" fragment-index=1}
+
+![](assets/fig4-p2.png){.fragment .fade-in .absolute height="330" width="330" top="48%" left="1%" fragment-index=2}
+
+:::
+
+::::
+
+:::: {.column width="70%"}
+
+![](assets/contrast-loadwise.png){height="525"}
+
+::::
+
+:::::
+
+::: aside
+
+FSU figures are for illustrative purpose only!
+
+:::
+
+::: notes
+meow meow
+:::
+
+## Conclusion
+
+- Identified sexual dimorphism in cervical spine flexion–extension response using Bayesian model
+- Male and female segments in extension tends to be similar
+- But in flexion, the female rotation was 4.5° more 
+than male in average.
+- Female cervical spine segmental kinematics cannot be considered as size-scaled versions of male.
+
+## Future Study
+
+
+
+## Acknowledgement
+

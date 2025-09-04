@@ -34,6 +34,8 @@
   <link href="presentation_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="presentation_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="presentation_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="presentation_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="presentation_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
   <link href="presentation_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
     .reveal div.sourceCode {
@@ -467,7 +469,7 @@ l_{ij} \sim \operatorname{Normal}(0,~\sigma_{l_{i}})
 <h3 id="residual-error">Residual Error</h3>
 <p><span class="math display">\[ E \sim \operatorname{Normal}(0,~\sigma_{E}) \]</span></p>
 <p><span class="math display">\[ \sigma_{E} \sim \operatorname{HalfStudentT}(\nu,~\sigma) \]</span></p>
-<p>where <span class="math inline">\(\nu\)</span> = 4, <span class="math inline">\(\sigma\)</span> = 3.4</p>
+<p><span class="math display">\[ \nu = 4, \sigma = 3.4 \]</span></p>
 </div>
 <div class="fragment fade-in-then-out" data-fragment-index="5" style="color: #FFCC00;">
 <h3 id="likelihood-posterior">Likelihood &amp; Posterior</h3>
@@ -521,12 +523,92 @@ l_{ij} \sim \operatorname{Normal}(0,~\sigma_{l_{i}})
 </ul>
 <aside><ol class="aside-footnotes"><li id="fn1"><p>Winkelstein et al., (2000)</p></li></ol></aside></section></section>
 <section>
-<section id="results" class="title-slide slide level1 center">
-<h1>Results</h1>
+<section id="results-discussion" class="title-slide slide level1 center">
+<h1>Results &amp; Discussion</h1>
 
 </section>
-<section id="res" class="slide level2">
-<h2>Res</h2>
+<section id="posterior-distributions" class="slide level2">
+<h2>Posterior Distributions</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<p><br> <br></p>
+<div class="fragment fade-out" title="What is posterior?" data-fragment-index="1">
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>What is posterior?</strong></p>
+</div>
+<div class="callout-content">
+<ul>
+<li>Probability distribution for the parameters in our model after sampling</li>
+<li>Reflects all we know about the problem</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment fade-in" data-id="txt1" style="font-size: 0.9em; text-align: right; position: absolute; top: 138px; left: 121px;" data-fragment-index="1">
+<p>Residual Error</p>
+</div>
+<div class="fragment fade-in" data-id="txt2" style="font-size: 0.9em; text-align: right; position: absolute; top: 220px; left: 102px;" data-fragment-index="2">
+<p>Common Effect</p>
+</div>
+<div class="fragment fade-in" data-id="txt3" style="font-size: 0.9em; text-align: right; position: absolute; top: 335px; left: 172px;" data-fragment-index="3">
+<p>Hyperprior</p>
+</div>
+<div class="fragment fade-in" data-id="txt4" style="font-size: 0.9em; text-align: right; position: absolute; top: 485px; left: 63px;" data-fragment-index="4">
+<p>Group-level Effect</p>
+</div>
+</div><div class="column" style="width:60%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="assets/forest-plot.png" height="540"></p>
+<figcaption>&nbsp; &nbsp; Forest Plot</figcaption>
+</figure>
+</div>
+</div><div class="gradient-border-box absolute fragment fade-in" data-fragment-index="1" style="top: 152px; left: 390px; width: 450px; height: 35px; ">
+
+</div><div class="gradient-border-box absolute fragment fade-in" data-fragment-index="2" style="top: 220px; left: 390px; width: 450px; height: 74px; ">
+
+</div><div class="gradient-border-box absolute fragment fade-in" data-fragment-index="3" style="top: 332px; left: 390px; width: 450px; height: 74px; ">
+
+</div><div class="gradient-border-box absolute fragment fade-in" data-fragment-index="4" style="top: 442px; left: 390px; width: 450px; height: 158px; ">
+
+</div>
+</div>
+<aside class="notes">
+<p>poterior is the result of baye ana. &amp; reflects all we know about the problem. post is just a updated prior due to sampling in the light of a new data (fit data/ training data)</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="contrast-bw-flexion-extension" class="slide level2">
+<h2>Contrast b/w Flexion &amp; Extension</h2>
+<div class="columns">
+<div class="column" style="width:30%;">
+<p><img data-src="assets/intact.png" class="absolute fragment fade-out" style="top: 8%; left: 1%; width: 330px; height: 330px; " data-fragment-index="1"></p>
+<p><img data-src="assets/intact.png" class="absolute fragment fade-out" style="top: 48%; left: 1%; width: 330px; height: 330px; " data-fragment-index="1"></p>
+<div class="r-stack">
+<p><img data-src="assets/fig1-p1.png" class="fragment fade-in-then-out absolute" style="top: 8%; left: 1%; width: 330px; height: 330px; " data-fragment-index="1"></p>
+<p><img data-src="assets/fig1-p2.png" class="fragment fade-in absolute" style="top: 8%; left: 1%; width: 330px; height: 330px; " data-fragment-index="2"></p>
+<p><img data-src="assets/fig2-p1.png" class="fragment fade-in-then-out absolute" style="top: 48%; left: 1%; width: 330px; height: 330px; " data-fragment-index="1"></p>
+<p><img data-src="assets/fig2-p2.png" class="fragment fade-in absolute" style="top: 48%; left: 1%; width: 330px; height: 330px; " data-fragment-index="2"></p>
+</div>
+</div><div class="column" style="width:70%;">
+<p><img data-src="assets/contrast-sexwise.png" height="525"></p>
+</div></div>
+
 <aside class="notes">
 <p>meow meow</p>
 <style type="text/css">
@@ -540,6 +622,55 @@ l_{ij} \sim \operatorname{Normal}(0,~\sigma_{l_{i}})
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
+<aside><div>
+<p>FSU figures are for illustrative purpose only!</p>
+</div></aside></section>
+<section id="contrast-bw-female-male" class="slide level2">
+<h2>Contrast b/w Female &amp; Male</h2>
+<div class="columns">
+<div class="column" style="width:30%;">
+<p><img data-src="assets/intact.png" class="absolute fragment fade-out" style="top: 8%; left: 1%; width: 330px; height: 330px; " data-fragment-index="1"></p>
+<p><img data-src="assets/intact.png" class="absolute fragment fade-out" style="top: 48%; left: 1%; width: 330px; height: 330px; " data-fragment-index="1"></p>
+<div class="r-stack">
+<p><img data-src="assets/fig3-p1.png" class="fragment fade-in-then-out absolute" style="top: 8%; left: 1%; width: 330px; height: 330px; " data-fragment-index="1"></p>
+<p><img data-src="assets/fig3-p2.png" class="fragment fade-in absolute" style="top: 8%; left: 1%; width: 330px; height: 330px; " data-fragment-index="2"></p>
+<p><img data-src="assets/fig4-p1.png" class="fragment fade-in-then-out absolute" style="top: 48%; left: 1%; width: 330px; height: 330px; " data-fragment-index="1"></p>
+<p><img data-src="assets/fig4-p2.png" class="fragment fade-in absolute" style="top: 48%; left: 1%; width: 330px; height: 330px; " data-fragment-index="2"></p>
+</div>
+</div><div class="column" style="width:70%;">
+<p><img data-src="assets/contrast-loadwise.png" height="525"></p>
+</div></div>
+
+<aside class="notes">
+<p>meow meow</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<aside><div>
+<p>FSU figures are for illustrative purpose only!</p>
+</div></aside></section>
+<section id="conclusion" class="slide level2">
+<h2>Conclusion</h2>
+<ul>
+<li>Identified sexual dimorphism in cervical spine flexion–extension response using Bayesian model</li>
+<li>Male and female segments in extension tends to be similar</li>
+<li>But in flexion, the female rotation was 4.5° more than male in average.</li>
+<li>Female cervical spine segmental kinematics cannot be considered as size-scaled versions of male.</li>
+</ul>
+</section>
+<section id="future-study" class="slide level2">
+<h2>Future Study</h2>
+</section>
+<section id="acknowledgement" class="slide level2">
+<h2>Acknowledgement</h2>
 
 </section></section>
 
@@ -558,6 +689,7 @@ l_{ij} \sim \operatorname{Normal}(0,~\sigma_{l_{i}})
   <script src="presentation_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
   <script src="presentation_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
   <script src="presentation_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="presentation_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
   <script src="presentation_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
@@ -579,7 +711,8 @@ l_{ij} \sim \operatorname{Normal}(0,~\sigma_{l_{i}})
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
 'jumpToSlide': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"8\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'chalkboard': {"buttons":true},
 'smaller': false,
  
         // Display controls in the bottom right corner
@@ -750,7 +883,7 @@ l_{ij} \sim \operatorname{Normal}(0,~\sigma_{l_{i}})
         },
 
         // reveal.js plugins
-        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
 
           RevealMath,
           RevealNotes,
