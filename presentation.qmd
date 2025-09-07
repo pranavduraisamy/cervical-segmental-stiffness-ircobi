@@ -32,43 +32,49 @@ format:
 IRCOBI Europe 2025 \| Vilnius \| 11 Sept 2025
 :::
 
-## Introduction
+## Introduction 
 
 :::::: columns
-::: {.column width="50%"}
+:::: {.column width="50%" style="font-size: 0.9em;"}
+-   Cervical spine segment - Two vertebra, Soft tissues
+-   Female have more risk of neck injury than male in traffic accidents
 -   Recent dummies and HBMs also focus on average female
--   Male ⇌ Female HBM, *through Morphing*
--   Models were made to mimic *average female anthropometry*
-:::
+-   Sex-specific calibration and validation are either limited or non-existent
 
-::: {.column width="50%"}
+::::
+
+:::: {.column width="50%"}
 ![FE Human Body Models](assets/hbm.jpg)
-:::
+::::
 
 ::: notes
-FE HBMs opens new possiblities in representing diverse populations. Most of the avg female HBMs are morphed from an avg male models, matching the node coords to represent a new anthropometry.. or sometimes vice versa from F to M.
+
 :::
+
 ::::::
 
-## Objective
+## Objective {.center style="text-align: center"}
 
-Quantify the differences between the male and female cervical spine segments in flexion and extension
+Quantify the [**differences between the male and female cervical spine segments**]{style="color:red;"} in flexion and extension
 
-::: {.callout-tip title="Worth considering..."}
--   Female have more risk of neck injury male in traffic accidents
--   Generally, Sex-specific calibration and validation are either limited or non-existent
-:::
 
 ::: notes
+That brings the objective of this study, 
+
 Just matching the anthropometry is not enough for a FE Model, We have to validate. but validating a F model remains a challange due to lack of F-specific experimental data. It is found to be common that Most of the studies analyzed without differentiating for sex (reported together). There are only few studies that have reported cervical spine response for F. Mostly M&F segments were used together for reporting or with no comparison between M&F.
 :::
 
 ## A Bit of Background...
 
 ::: r-stack
-![](assets/nightingale2007.jpg){.fragment .absolute width="500" top="12%" left="15%"}
 
-![](assets/nightingale2002.jpg){.fragment .absolute width="500" top="40%" left="27%"}
+![](assets/wheeldon2006.jpg){.fragment .absolute width="500" top="11%" left="1%"}
+
+![](assets/winkelstein2000.png){.fragment .absolute width="500" top="35%" left="5%"}
+
+![](assets/nightingale2007.jpg){.fragment .absolute width="500" top="14%" left="45%"}
+
+![](assets/nightingale2002.jpg){.fragment .absolute width="500" top="40%" left="40%"}
 
 :::
 
@@ -78,17 +84,9 @@ Just matching the anthropometry is not enough for a FE Model, We have to validat
 
 :::: {.column width="60%"}
 
-::: {style="font-size: 0.8em;"}
 -   Both studies are identical, differing only in sex of the specimens used
--   Unembalmed PMHS, Adjacent segments were lost during sectioning
+-   Unembalmed PMHS
 -   Pure Moment Loads - Flexibility Tests (Max. 3.5Nm) & Failure Tests
-:::
-
-::: {.callout-note title="Mostly FSUs were segmented into..."}
-Male → O-C3, [C4-C5 & C6-C7]{style="color:dodgerblue;"}
-
-Female → O-C2, [C3-C4, C5-C6 & C7-T1]{style="color:deeppink;"}
-:::
 
 ::::
 
@@ -106,6 +104,267 @@ meow meow
 
 # Methods
 
+## Exploratory Data Analysis
+
+![](assets/count-data.jpg){fig-align="center"}
+
+::: notes
+meow meow
+:::
+
+## Exploratory Data Analysis 
+
+![](assets/box-plot-eda.jpg){fig-align="center"}
+
+::: notes
+meow meow
+:::
+
+## Concept behind Linear Regression
+
+::: r-stack
+
+![](assets/lr-stack1.png){.fragment .fade-in-then-out .absolute height="500" top="18%" left="25%"}
+
+![](assets/lr-stack2.png){.fragment .fade-in-then-out .absolute height="500" top="18%" left="25%"}
+
+![](assets/lr-stack3.png){.fragment .fade-in .absolute height="500" top="18%" left="25%"}
+
+:::
+
+
+
+::: notes
+meow meow
+:::
+
+## Classical vs Bayesian Regression
+
+::::: columns
+
+:::: {.column width="50%" style="font-size: 90%;" .fragment}
+
+#### Traditional Way
+
+\text{From Line of Best Fit,}
+\begin{align}
+Y &= \alpha + \beta X\\
+\alpha &= \text{Constant (Intercept)}\\
+\beta &= \text{Constant (Slope)}\\
+\end{align}
+
+::::
+
+:::: {.column width="50%" style="font-size: 90%;" .fragment}
+
+#### Doing it in a Bayesian way...
+
+\begin{align} 
+\alpha &\sim \text{a distribution}\\
+\beta &\sim \text{another distribution}\\
+\sigma &\sim \text{some other distribution}\\
+\mu &= \alpha + \beta X\\
+Y &\sim \operatorname{N}(\mu,~\sigma)\\
+\end{align}
+
+::::
+
+:::::
+
+## Bayesian Analysis - In a nutshell
+
+![Bayesian Linear Regression Model](assets/lr-bayes.jpg){fig-align="center" height="450"}
+
+::: aside 
+Adapted from *Bayesian Analysis with Python by Oswaldo Martin*
+:::
+
+::: notes
+meow meow
+:::
+
+## Bayesian Model Building {.r-fit-text}
+
+:::::: columns
+
+::::: {.column width="50%" style="font-size: 80%;"}
+
+- Prior data from *Winkelstein2000*
+- Hierarchical model to include effect of Sex
+
+![](assets/prior-pred.png){.absolute top="33%"}
+
+:::::
+
+::::: {.column width="45%"}
+
+![Bayesian Linear Regression Model](assets/bayesian-model.jpg)
+
+:::::
+
+::::::
+
+::: notes
+meow meow 
+:::
+
+
+# Results & Discussion
+
+## Posterior Distributions
+
+![](assets/forest-plot.png){fig-align="center"}
+
+::::: columns
+
+:::: {.column width="30%"}
+
+::: {data-id="txt2" style="font-size: 0.9em; text-align: right; position: absolute; top: 155px; left: 52px;" .fragment .fade-in fragment-index=1}
+Common Effect
+:::
+
+::: {data-id="txt4" style="font-size: 0.9em; text-align: right; position: absolute; top: 375px; left: 13px;" .fragment .fade-in fragment-index=2}
+Group-level Effect
+:::
+
+::::
+
+
+:::: {.column width="60%"}
+
+::::
+
+::: {.gradient-border-box .absolute top="212" left="215" height="74" width="450" .fragment .fade-in fragment-index=1}
+:::
+
+::: {.gradient-border-box .absolute top="435" left="215" height="158" width="450" .fragment .fade-in fragment-index=2}
+:::
+
+:::::
+
+::: notes
+poterior is the result of baye ana. & reflects all we know about the problem. post is just a updated prior due to sampling in the light of a new data (fit data/ training data)
+:::
+
+## Contrast b/w Flexion & Extension
+
+::::: columns
+
+:::: {.column width="30%"}
+
+![](assets/intact.png){.absolute height="330" width="330" top="8%" left="1%" .fragment .fade-out fragment-index=1}
+
+![](assets/intact.png){.absolute height="330" width="330" top="48%" left="1%" .fragment .fade-out fragment-index=1}
+
+::: r-stack
+
+![](assets/fig1-p1.png){.fragment .fade-in-then-out .absolute height="330" width="330" top="8%" left="1%" fragment-index=1}
+
+![](assets/fig1-p2.png){.fragment .fade-in .absolute height="330" width="330" top="8%" left="1%" fragment-index=2}
+
+![](assets/fig2-p1.png){.fragment .fade-in-then-out .absolute height="330" width="330" top="48%" left="1%" fragment-index=1}
+
+![](assets/fig2-p2.png){.fragment .fade-in .absolute height="330" width="330" top="48%" left="1%" fragment-index=2}
+
+:::
+
+::::
+
+:::: {.column width="70%"}
+
+![](assets/contrast-sexwise.png){height="525"}
+
+::::
+
+:::::
+
+::: aside
+
+FSU figures are for illustrative purpose only!
+
+:::
+
+::: notes
+meow meow
+:::
+
+## Contrast b/w Female & Male
+
+::::: columns
+
+:::: {.column width="30%"}
+
+![](assets/intact.png){.absolute height="330" width="330" top="8%" left="1%" .fragment .fade-out fragment-index=1}
+
+![](assets/intact.png){.absolute height="330" width="330" top="48%" left="1%" .fragment .fade-out fragment-index=1}
+
+::: r-stack
+
+![](assets/fig3-p1.png){.fragment .fade-in-then-out .absolute height="330" width="330" top="8%" left="1%" fragment-index=1}
+
+![](assets/fig3-p2.png){.fragment .fade-in .absolute height="330" width="330" top="8%" left="1%" fragment-index=2}
+
+![](assets/fig4-p1.png){.fragment .fade-in-then-out .absolute height="330" width="330" top="48%" left="1%" fragment-index=1}
+
+![](assets/fig4-p2.png){.fragment .fade-in .absolute height="330" width="330" top="48%" left="1%" fragment-index=2}
+
+:::
+
+::::
+
+:::: {.column width="70%"}
+
+![](assets/contrast-loadwise.png){height="525"}
+
+::::
+
+:::::
+
+::: aside
+
+FSU figures are for illustrative purpose only!
+
+:::
+
+::: notes
+meow meow
+:::
+
+## Conclusion
+
+- Male and female segments in extension tends to be similar
+- But in flexion, the female rotation was 4.5° more 
+than male in average.
+- Female cervical spine segmental kinematics cannot be considered as size-scaled versions of male.
+
+## Future Study
+
+
+
+## Acknowledgement
+
+
+## ![](assets/title-logos.png) {background-color="white"}
+
+![](assets/qr.png)
+<center>
+
+::: {style="font-size: 1.5em;"}
+**Comparison of Flexion–Extension Responses between Male and Female sub-Axial Cervical Spine Segments**
+:::
+
+::: {style="font-size: 0.8em;"}
+[*Pranav Duraisamy*]{.underline}*, Davidson Jebaseelan, Jobin D. John*
+:::
+
+</center>
+
+::: footer
+IRCOBI Europe 2025 \| Vilnius \| 11 Sept 2025
+:::
+
+# ✨ Bonus Slides ✨ {.center style="text-align: center"}
+
 ## Data Extraction {.smaller}
 
 - Extracted reports and ASCII data from NHTSA database using API
@@ -117,79 +376,6 @@ meow meow
 -   Flexibility Tests
 -   Rotation angle interpolated at 3Nm
 -   Sub-Axial Cervical segments (C3 to C7)
-:::
-
-::: notes
-meow meow
-:::
-
-## Exploratory Data Analysis{.smaller}
-
-:::: columns
-
-::: {.column width=65%}
-![Count Data](assets/count-data.jpg)
-:::
-
-::: {.column width=34%}
-![Box Plot of Segmental Rotations at 3Nm](assets/box-plot-eda.jpg)
-:::
-
-::::
-
-::: notes
-meow meow
-:::
-
-## Bayesian Analysis - In a nutshell
-
-
-##### Basic idea behind Linear Regression
-
-::: r-stack
-
-![](assets/lr-stack1.png){.fragment .fade-in-then-out .absolute height="450" top="18%" left="1%"}
-
-![](assets/lr-stack2.png){.fragment .fade-in-then-out .absolute height="450" top="18%" left="1%"}
-
-![](assets/lr-stack3.png){.fragment .fade-in-then-out .absolute height="450" top="18%" left="1%"}
-
-![](assets/lr-stack4.png){.fragment .fade-in-then-out .absolute height="450" top="18%" left="1%"}
-
-:::
-
-
-::: notes
-meow meow
-:::
-
-## Bayesian Analysis - In a nutshell {visibility="uncounted" auto-animate="true" auto-animate-unmatched="slide"}
-
-##### Doing it in a Bayesian way...
-
-::::: columns
-:::: {.column width="50%" style="font-size: 80%;"}
-
-<br/>
-
-\begin{align} 
-\alpha &\sim \text{a prior}\\
-\beta &\sim \text{another prior}\\
-\sigma &\sim \text{some other prior}\\
-\mu &= \alpha + \beta X\\
-Y &\sim \operatorname{N}(\mu,~\sigma)\\
-Y &\sim \operatorname{N}(\mu = \alpha + \beta X,~\sigma)\\
-\end{align}
-
-::::
-
-:::: {.column width="45%"}
-![Bayesian Linear Regression Model](assets/lr-bayes.jpg)
-::::
-:::::
-
-::: aside 
-Adapted from *Bayesian Analysis with Python by Oswaldo Martin*
 :::
 
 ::: notes
@@ -310,7 +496,7 @@ $$ R = L_{i} + l_{ij} + E $$
 ::: {data-id="box4" style="background: #ffffff00; width: 180px; height: 240px; position: absolute; top: 85px; left: 800px; border: 5px solid #97B067; border-radius: 15px; z-index:30" .fragment .fade-in-then-out fragment-index=4}
 :::
 
-::: {data-id="box5" style="background: #ffffff00; width: 120px; height: 175px; position: absolute; top: 400px; left: 672px; border: 5px solid #FFCC00; border-radius: 15px; z-index:30" .fragment .fade-in-then-out fragment-index=5}
+::: {data-id="box5" style="background: #ffffff00; width: 120px; height: 175px; position: absolute; top: 400px; left: 665px; border: 5px solid #FFCC00; border-radius: 15px; z-index:30" .fragment .fade-in-then-out fragment-index=5}
 :::
 
 :::::
@@ -328,7 +514,9 @@ meow meow
 - Sampled using MCMC NUTS sampler in 4 chains, each with 1500 draws
 - Posterior predictive distributions were used for comparing the responses
 
-# Results & Discussion
+::: notes
+meow meow 
+:::
 
 ## Posterior Distributions
 
@@ -340,7 +528,7 @@ meow meow
 <br/> 
 
 ::: {.callout-tip title="What is posterior?" .fragment .fade-out fragment-index=1}
--   Probability distribution for the parameters in our model after sampling
+-   Probability distribution for the parameters in the model after sampling
 -   Reflects all we know about the problem
 :::
 
@@ -386,102 +574,3 @@ Group-level Effect
 ::: notes
 poterior is the result of baye ana. & reflects all we know about the problem. post is just a updated prior due to sampling in the light of a new data (fit data/ training data)
 :::
-
-## Contrast b/w Flexion & Extension
-
-::::: columns
-
-:::: {.column width="30%"}
-
-![](assets/intact.png){.absolute height="330" width="330" top="8%" left="1%" .fragment .fade-out fragment-index=1}
-
-![](assets/intact.png){.absolute height="330" width="330" top="48%" left="1%" .fragment .fade-out fragment-index=1}
-
-::: r-stack
-
-![](assets/fig1-p1.png){.fragment .fade-in-then-out .absolute height="330" width="330" top="8%" left="1%" fragment-index=1}
-
-![](assets/fig1-p2.png){.fragment .fade-in .absolute height="330" width="330" top="8%" left="1%" fragment-index=2}
-
-![](assets/fig2-p1.png){.fragment .fade-in-then-out .absolute height="330" width="330" top="48%" left="1%" fragment-index=1}
-
-![](assets/fig2-p2.png){.fragment .fade-in .absolute height="330" width="330" top="48%" left="1%" fragment-index=2}
-
-:::
-
-::::
-
-:::: {.column width="70%"}
-
-![](assets/contrast-sexwise.png){height="525"}
-
-::::
-
-:::::
-
-::: aside
-
-FSU figures are for illustrative purpose only!
-
-:::
-
-::: notes
-meow meow
-:::
-
-## Contrast b/w Female & Male
-
-::::: columns
-
-:::: {.column width="30%"}
-
-![](assets/intact.png){.absolute height="330" width="330" top="8%" left="1%" .fragment .fade-out fragment-index=1}
-
-![](assets/intact.png){.absolute height="330" width="330" top="48%" left="1%" .fragment .fade-out fragment-index=1}
-
-::: r-stack
-
-![](assets/fig3-p1.png){.fragment .fade-in-then-out .absolute height="330" width="330" top="8%" left="1%" fragment-index=1}
-
-![](assets/fig3-p2.png){.fragment .fade-in .absolute height="330" width="330" top="8%" left="1%" fragment-index=2}
-
-![](assets/fig4-p1.png){.fragment .fade-in-then-out .absolute height="330" width="330" top="48%" left="1%" fragment-index=1}
-
-![](assets/fig4-p2.png){.fragment .fade-in .absolute height="330" width="330" top="48%" left="1%" fragment-index=2}
-
-:::
-
-::::
-
-:::: {.column width="70%"}
-
-![](assets/contrast-loadwise.png){height="525"}
-
-::::
-
-:::::
-
-::: aside
-
-FSU figures are for illustrative purpose only!
-
-:::
-
-::: notes
-meow meow
-:::
-
-## Conclusion
-
-- Identified sexual dimorphism in cervical spine flexion–extension response using Bayesian model
-- Male and female segments in extension tends to be similar
-- But in flexion, the female rotation was 4.5° more 
-than male in average.
-- Female cervical spine segmental kinematics cannot be considered as size-scaled versions of male.
-
-## Future Study
-
-
-
-## Acknowledgement
-
