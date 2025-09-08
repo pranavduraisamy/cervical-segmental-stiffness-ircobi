@@ -32,6 +32,10 @@ format:
 IRCOBI Europe 2025 \| Vilnius \| 11 Sept 2025
 :::
 
+::: notes
+Hi, Im pranav, recently completed my bachelors in mech. this study is a result of my bachelors pjt thesis. its mainly concentrated on sex diff in sub axial c spine segments
+:::
+
 ## Introduction 
 
 :::::: columns
@@ -48,7 +52,7 @@ IRCOBI Europe 2025 \| Vilnius \| 11 Sept 2025
 ::::
 
 ::: notes
-
+I assume most of the ppl in this hall would be majorly working on spine biomech. To give a small intro on C spine segments. It consists of 2 vertebra, and some ligaments in between like CL, ligamentum flavum, articular processes and so on.. then there is also IVD which have Annulus fibers and nucleus. Spinal injuries esp neck injuries in women are more than men specifically in traffic accidents. To study the injury in female,  We use female HBM. However female HBMs are morphed versions of male HBMs and sex specific validation is not done on those models.
 :::
 
 ::::::
@@ -59,9 +63,7 @@ Quantify the [**differences between the male and female cervical spine segments*
 
 
 ::: notes
-That brings the objective of this study, 
-
-Just matching the anthropometry is not enough for a FE Model, We have to validate. but validating a F model remains a challange due to lack of F-specific experimental data. It is found to be common that Most of the studies analyzed without differentiating for sex (reported together). There are only few studies that have reported cervical spine response for F. Mostly M&F segments were used together for reporting or with no comparison between M&F.
+That leads to the objective of this study, thats to quantify the differences between the male and female cervical spine segments in flexion and extension
 :::
 
 ## A Bit of Background...
@@ -76,6 +78,10 @@ Just matching the anthropometry is not enough for a FE Model, We have to validat
 
 ![](assets/nightingale2002.jpg){.fragment .absolute width="500" top="40%" left="40%"}
 
+:::
+
+::: notes
+To give a broader overview of avl data relevant to this study. First we have wheeldon study, there were both male & female specimens but in the analysis everything were clubbed together. So we dunno the diff bw male & female. Then we have this study by winkelstein but all the specimens in this study were male. Finalluy we have these studies by nightingale, where the data for male & female were reported separately & its available openly in NHTSA database.
 :::
 
 ## A Bit of Background... {visibility="uncounted"}
@@ -99,17 +105,17 @@ Just matching the anthropometry is not enough for a FE Model, We have to validat
 :::::
 
 ::: notes
-meow meow
+the exp setup was same for both the nightingale studies. so it can be made as a comparable study which was not done by the original author. c spine segments were cut from unembalmed pmhs and tested in flexibility & failure tests
 :::
 
 # Methods
 
 ## Exploratory Data Analysis
 
-![](assets/count-data.jpg){fig-align="center"}
+![](assets/count-data.jpg){fig-align="center" height="550"}
 
 ::: notes
-meow meow
+This slide shows no of specimens tested. just for the moment, consider c3c4 there are 11 specimens for female but there is only 1 specimen for its very adjacent c4c5 . this is because of the segmentation of fsus. same trend follows for male too but different segments. bayesian methodology is more apt for these kind of data.
 :::
 
 ## Exploratory Data Analysis 
@@ -117,7 +123,7 @@ meow meow
 ![](assets/box-plot-eda.jpg){fig-align="center"}
 
 ::: notes
-meow meow
+This plot shows the distribution of rotation angle at 3nm. you could see that even in this eda that the extension is similar in male & female but thats not the case for flexion. females rot angle is higher than male.
 :::
 
 ## Concept behind Linear Regression
@@ -132,10 +138,8 @@ meow meow
 
 :::
 
-
-
 ::: notes
-meow meow
+This is the linear reg as we know it, there will be a set of points, we fit the line & the residuals would be normally distributed. behind the screen you would use MLE or least squares or smthng similar to minimise these residuals.
 :::
 
 ## Classical vs Bayesian Regression
@@ -169,6 +173,10 @@ Y &\sim \operatorname{N}(\mu,~\sigma)\\
 
 ::::
 
+::: notes
+From the line of best fit, you would find the parameters a & b as consts. another approach is to do bayesian linear reg. where these parameters are estimated as probability distributions
+:::
+
 :::::
 
 ## Bayesian Analysis - In a nutshell
@@ -180,7 +188,7 @@ Adapted from *Bayesian Analysis with Python by Oswaldo Martin*
 :::
 
 ::: notes
-meow meow
+As you can see here bayesian is other way around than a classical regression. all the relations are probabilistic than deterministic. every parameter whether it can be slope, intercept or even output variable is a probability distribution than singular values.
 :::
 
 ## Bayesian Model Building {.r-fit-text}
@@ -205,7 +213,7 @@ meow meow
 ::::::
 
 ::: notes
-meow meow 
+Coming back to this study, we know that when 3nm moment is applied, the rotation would be more than 0 deg and from previous studies we know that it wont be more than 20 deg. we use that prior information as a starting point for fitting. we used a hierarchical model in which sex was treated as level. so that each flex & ext have diff parameters for male & female
 :::
 
 
@@ -243,7 +251,7 @@ Group-level Effect
 :::::
 
 ::: notes
-poterior is the result of baye ana. & reflects all we know about the problem. post is just a updated prior due to sampling in the light of a new data (fit data/ training data)
+we can see the dist of coeff for loading are similar in ext & flex. they are literally on top of each other. but if you look at this, the coeff for multilevel loading given sex in Ext, male & female are similar. but in flexion, we cans ee a clear difference between male & female.
 :::
 
 ## Contrast b/w Flexion & Extension
@@ -285,7 +293,7 @@ FSU figures are for illustrative purpose only!
 :::
 
 ::: notes
-meow meow
+You could see a more fancier version of previous plot in this slide. In male, the top left plot, the dist of segmental rot at 3nm. the dist of flex & ext, they overlap, they are not different. Then if you look at the left bottom plot, for female, the ext is similar to male & the flex is higher & they dont overlap. And we can quantify that using contrast plots. the contrast dist is a diff of 2 dist. And in this case its the difference of flex & ext. if yu look for male in top right , its distributed around 0 which means there is no diff between flex & ext. But when we come to the female, we see the contrast dist is not abt 0, rather its about 4 deg showing that there is significant diff b/w flex & ext in female. 
 :::
 
 ## Contrast b/w Female & Male
@@ -327,15 +335,15 @@ FSU figures are for illustrative purpose only!
 :::
 
 ::: notes
-meow meow
+Now we can see the data in a different way also. you could see the differnece in male & female in extension which is in top row.. and flexion is in bottom row. Anyways we see similar differences. 
 :::
 
 ## Conclusion
 
 - Male and female segments in extension tends to be similar
 - But in flexion, the female rotation was 4.5° more 
-than male in average.
-- Female cervical spine segmental kinematics cannot be considered as size-scaled versions of male.
+than male in average
+- Female cervical spine segmental kinematics cannot be considered as size-scaled versions of male
 
 ## Future Study
 

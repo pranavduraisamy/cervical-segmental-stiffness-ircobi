@@ -342,6 +342,19 @@
 <div class="footer">
 <p>IRCOBI Europe 2025 | Vilnius | 11 Sept 2025</p>
 </div>
+<aside class="notes">
+<p>Hi, Im pranav, recently completed my bachelors in mech. this study is a result of my bachelors pjt thesis. its mainly concentrated on sex diff in sub axial c spine segments</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="introduction" class="slide level2">
 <h2>Introduction</h2>
@@ -361,7 +374,7 @@
 </figure>
 </div>
 </div><aside class="notes">
-
+<p>I assume most of the ppl in this hall would be majorly working on spine biomech. To give a small intro on C spine segments. It consists of 2 vertebra, and some ligaments in between like CL, ligamentum flavum, articular processes and so on.. then there is also IVD which have Annulus fibers and nucleus. Spinal injuries esp neck injuries in women are more than men specifically in traffic accidents. To study the injury in female, We use female HBM. However female HBMs are morphed versions of male HBMs and sex specific validation is not done on those models.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -379,8 +392,7 @@
 <h2>Objective</h2>
 <p>Quantify the <span style="color:red;"><strong>differences between the male and female cervical spine segments</strong></span> in flexion and extension</p>
 <aside class="notes">
-<p>That brings the objective of this study,</p>
-<p>Just matching the anthropometry is not enough for a FE Model, We have to validate. but validating a F model remains a challange due to lack of F-specific experimental data. It is found to be common that Most of the studies analyzed without differentiating for sex (reported together). There are only few studies that have reported cervical spine response for F. Mostly M&amp;F segments were used together for reporting or with no comparison between M&amp;F.</p>
+<p>That leads to the objective of this study, thats to quantify the differences between the male and female cervical spine segments in flexion and extension</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -401,6 +413,19 @@
 <p><img data-src="assets/nightingale2007.jpg" class="fragment absolute" style="top: 14%; left: 45%; width: 500px; "></p>
 <p><img data-src="assets/nightingale2002.jpg" class="fragment absolute" style="top: 40%; left: 40%; width: 500px; "></p>
 </div>
+<aside class="notes">
+<p>To give a broader overview of avl data relevant to this study. First we have wheeldon study, there were both male &amp; female specimens but in the analysis everything were clubbed together. So we dunno the diff bw male &amp; female. Then we have this study by winkelstein but all the specimens in this study were male. Finalluy we have these studies by nightingale, where the data for male &amp; female were reported separately &amp; its available openly in NHTSA database.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="a-bit-of-background-1" class="slide level2" data-visibility="uncounted">
 <h2>A Bit of Background…</h2>
@@ -421,7 +446,7 @@
 </div>
 </div></div>
 <aside class="notes">
-<p>meow meow</p>
+<p>the exp setup was same for both the nightingale studies. so it can be made as a comparable study which was not done by the original author. c spine segments were cut from unembalmed pmhs and tested in flexibility &amp; failure tests</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -441,9 +466,13 @@
 </section>
 <section id="exploratory-data-analysis" class="slide level2">
 <h2>Exploratory Data Analysis</h2>
-
-<img data-src="assets/count-data.jpg" class="quarto-figure quarto-figure-center r-stretch"><aside class="notes">
-<p>meow meow</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="assets/count-data.jpg" class="quarto-figure quarto-figure-center" height="550"></p>
+</figure>
+</div>
+<aside class="notes">
+<p>This slide shows no of specimens tested. just for the moment, consider c3c4 there are 11 specimens for female but there is only 1 specimen for its very adjacent c4c5 . this is because of the segmentation of fsus. same trend follows for male too but different segments. bayesian methodology is more apt for these kind of data.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -460,7 +489,7 @@
 <h2>Exploratory Data Analysis</h2>
 
 <img data-src="assets/box-plot-eda.jpg" class="quarto-figure quarto-figure-center r-stretch"><aside class="notes">
-<p>meow meow</p>
+<p>This plot shows the distribution of rotation angle at 3nm. you could see that even in this eda that the extension is similar in male &amp; female but thats not the case for flexion. females rot angle is higher than male.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -481,7 +510,7 @@
 <p><img data-src="assets/lr-stack3.png" class="fragment fade-in absolute" style="top: 18%; left: 25%; height: 500px; "></p>
 </div>
 <aside class="notes">
-<p>meow meow</p>
+<p>This is the linear reg as we know it, there will be a set of points, we fit the line &amp; the residuals would be normally distributed. behind the screen you would use MLE or least squares or smthng similar to minimise these residuals.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -515,7 +544,20 @@ Y &amp;= \alpha + \beta X\\
 \mu &amp;= \alpha + \beta X\\
 Y &amp;\sim \operatorname{N}(\mu,~\sigma)\\
 \end{align}\]</span></p>
-</div></div>
+</div><aside class="notes">
+<p>From the line of best fit, you would find the parameters a &amp; b as consts. another approach is to do bayesian linear reg. where these parameters are estimated as probability distributions</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</div>
 </section>
 <section id="bayesian-analysis---in-a-nutshell" class="slide level2">
 <h2>Bayesian Analysis - In a nutshell</h2>
@@ -527,7 +569,7 @@ Y &amp;\sim \operatorname{N}(\mu,~\sigma)\\
 </div>
 
 <aside class="notes">
-<p>meow meow</p>
+<p>As you can see here bayesian is other way around than a classical regression. all the relations are probabilistic than deterministic. every parameter whether it can be slope, intercept or even output variable is a probability distribution than singular values.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -560,7 +602,7 @@ Y &amp;\sim \operatorname{N}(\mu,~\sigma)\\
 </div>
 </div></div>
 <aside class="notes">
-<p>meow meow</p>
+<p>Coming back to this study, we know that when 3nm moment is applied, the rotation would be more than 0 deg and from previous studies we know that it wont be more than 20 deg. we use that prior information as a starting point for fitting. we used a hierarchical model in which sex was treated as level. so that each flex &amp; ext have diff parameters for male &amp; female</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -598,7 +640,7 @@ Y &amp;\sim \operatorname{N}(\mu,~\sigma)\\
 </div>
 </div>
 <aside class="notes">
-<p>poterior is the result of baye ana. &amp; reflects all we know about the problem. post is just a updated prior due to sampling in the light of a new data (fit data/ training data)</p>
+<p>we can see the dist of coeff for loading are similar in ext &amp; flex. they are literally on top of each other. but if you look at this, the coeff for multilevel loading given sex in Ext, male &amp; female are similar. but in flexion, we cans ee a clear difference between male &amp; female.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -628,7 +670,7 @@ Y &amp;\sim \operatorname{N}(\mu,~\sigma)\\
 </div></div>
 
 <aside class="notes">
-<p>meow meow</p>
+<p>You could see a more fancier version of previous plot in this slide. In male, the top left plot, the dist of segmental rot at 3nm. the dist of flex &amp; ext, they overlap, they are not different. Then if you look at the left bottom plot, for female, the ext is similar to male &amp; the flex is higher &amp; they dont overlap. And we can quantify that using contrast plots. the contrast dist is a diff of 2 dist. And in this case its the difference of flex &amp; ext. if yu look for male in top right , its distributed around 0 which means there is no diff between flex &amp; ext. But when we come to the female, we see the contrast dist is not abt 0, rather its about 4 deg showing that there is significant diff b/w flex &amp; ext in female.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -660,7 +702,7 @@ Y &amp;\sim \operatorname{N}(\mu,~\sigma)\\
 </div></div>
 
 <aside class="notes">
-<p>meow meow</p>
+<p>Now we can see the data in a different way also. you could see the differnece in male &amp; female in extension which is in top row.. and flexion is in bottom row. Anyways we see similar differences.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -679,8 +721,8 @@ Y &amp;\sim \operatorname{N}(\mu,~\sigma)\\
 <h2>Conclusion</h2>
 <ul>
 <li>Male and female segments in extension tends to be similar</li>
-<li>But in flexion, the female rotation was 4.5° more than male in average.</li>
-<li>Female cervical spine segmental kinematics cannot be considered as size-scaled versions of male.</li>
+<li>But in flexion, the female rotation was 4.5° more than male in average</li>
+<li>Female cervical spine segmental kinematics cannot be considered as size-scaled versions of male</li>
 </ul>
 </section>
 <section id="future-study" class="slide level2">
