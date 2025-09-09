@@ -4,7 +4,6 @@ format:
     revealjs:
         theme: [serif, assets/custom.scss]
         slide-number: true
-        logo: assets/ircobi-logo.jpg
         css: assets/custom.css
         footer: Comparison of Flexion–Extension Responses between Male and Female sub-Axial Cervical Spine Segments
         transition: slide
@@ -39,16 +38,30 @@ Hi, Im pranav, recently completed my bachelors in mech. this study is a result o
 ## Introduction 
 
 :::::: columns
-:::: {.column width="50%" style="font-size: 0.9em;"}
+:::: { .column width="50%" style="font-size: 0.9em;"}
+
+::: {.fragment .fade-in fragment-index=1}
 -   Cervical spine segment - Two vertebra, Soft tissues
 -   Female have more risk of neck injury than male in traffic accidents
+:::
+
+::: {.fragment .fade-in fragment-index=2}
 -   Recent dummies and HBMs also focus on average female
 -   Sex-specific calibration and validation are either limited or non-existent
+:::
 
 ::::
 
 :::: {.column width="50%"}
-![FE Human Body Models](assets/hbm.jpg)
+
+::: r-stack
+
+![](assets/hbm0.jpg){.fragment fragment-index=1}
+
+![](assets/hbm.jpg){.fragment fragment-index=2}
+
+:::
+
 ::::
 
 ::: notes
@@ -70,13 +83,9 @@ That leads to the objective of this study, thats to quantify the differences bet
 
 ::: r-stack
 
-![](assets/wheeldon2006.jpg){.fragment .absolute width="500" top="11%" left="1%"}
+![](assets/wheeldon2006.jpg){.fragment .absolute width="500" top="12%" left="15%"}
 
-![](assets/winkelstein2000.png){.fragment .absolute width="500" top="35%" left="5%"}
-
-![](assets/nightingale2007.jpg){.fragment .absolute width="500" top="14%" left="45%"}
-
-![](assets/nightingale2002.jpg){.fragment .absolute width="500" top="40%" left="40%"}
+![](assets/winkelstein2000.png){.fragment .absolute width="500" top="37%" left="27%"}
 
 :::
 
@@ -86,23 +95,17 @@ To give a broader overview of avl data relevant to this study. First we have whe
 
 ## A Bit of Background... {visibility="uncounted"}
 
-::::: columns
+::: r-stack
 
-:::: {.column width="60%"}
+![](assets/nightingale2007.jpg){.fragment .absolute  top="14%" left="1%" width="500" fragment-index=1}
 
--   Both studies are identical, differing only in sex of the specimens used
--   Unembalmed PMHS
--   Pure Moment Loads - Flexibility Tests (Max. 3.5Nm) & Failure Tests
+![](assets/nightingale2002.jpg){.fragment .absolute top="40%" left="5%" width="500" fragment-index=2}
 
-::::
+![](assets/nightingale-schematic.jpg){.fragment .absolute top="27%" left="60%" width="400" fragment-index=3}
 
-:::: {.column width="40%"}
-<br/>
+:::
 
-![Schematic of experimental apparatus by Nightingale et al.,](assets/nightingale-schematic.jpg)
-::::
-
-:::::
+[Experimental setup used by Nightingale et al.,]{.fragment fragment-index=3 .absolute top="68%" left="60%" width="400" style="font-size: 80%;"}
 
 ::: notes
 the exp setup was same for both the nightingale studies. so it can be made as a comparable study which was not done by the original author. c spine segments were cut from unembalmed pmhs and tested in flexibility & failure tests
@@ -148,27 +151,28 @@ This is the linear reg as we know it, there will be a set of points, we fit the 
 
 :::: {.column width="50%" style="font-size: 90%;" .fragment}
 
-#### Traditional Way
+#### MLE Approach
 
 \text{From Line of Best Fit,}
 \begin{align}
-Y &= \alpha + \beta X\\
+Y &= \alpha + \beta X ± \sigma\\
+ \\
 \alpha &= \text{Constant (Intercept)}\\
 \beta &= \text{Constant (Slope)}\\
+\sigma &\sim \text{Normally distributed}
 \end{align}
 
 ::::
 
 :::: {.column width="50%" style="font-size: 90%;" .fragment}
 
-#### Doing it in a Bayesian way...
-
+#### Probabilistic Approach
 \begin{align} 
-\alpha &\sim \text{a distribution}\\
-\beta &\sim \text{another distribution}\\
-\sigma &\sim \text{some other distribution}\\
-\mu &= \alpha + \beta X\\
 Y &\sim \operatorname{N}(\mu,~\sigma)\\
+\mu &= \alpha + \beta X\\
+\alpha &\sim \text{A distribution}\\
+\beta &\sim \text{Another distribution}\\
+\sigma &\sim \text{Some other distribution}\\
 \end{align}
 
 ::::
@@ -195,18 +199,20 @@ As you can see here bayesian is other way around than a classical regression. al
 
 :::::: columns
 
-::::: {.column width="50%" style="font-size: 80%;"}
+::::: {.column width="50%" style="font-size: 60%;"}
 
-- Prior data from *Winkelstein2000*
-- Hierarchical model to include effect of Sex
+\begin{align}
+L_i &= \text{Coeff. for loading mode}\\
+l_{ij} &= \text{Coeff. for loading mode specific to sex}\\
+E &= \text{Residual random error}\\
+\end{align}
 
-![](assets/prior-pred.png){.absolute top="33%"}
-
+![](assets/prior-pred.png){.absolute top="33%" height="60%"}
 :::::
 
 ::::: {.column width="45%"}
 
-![Bayesian Linear Regression Model](assets/bayesian-model.jpg)
+![R= Segmental rotation angle at 3Nm](assets/bayesian-model.jpg)
 
 :::::
 
@@ -227,12 +233,12 @@ Coming back to this study, we know that when 3nm moment is applied, the rotation
 
 :::: {.column width="30%"}
 
-::: {data-id="txt2" style="font-size: 0.9em; text-align: right; position: absolute; top: 155px; left: 52px;" .fragment .fade-in fragment-index=1}
-Common Effect
+::: {data-id="txt2" style="font-size: 70%; text-align: right; position: absolute; top: 157px; left: 52px;" .fragment .fade-in fragment-index=1}
+Coeff. for loading mode
 :::
 
-::: {data-id="txt4" style="font-size: 0.9em; text-align: right; position: absolute; top: 375px; left: 13px;" .fragment .fade-in fragment-index=2}
-Group-level Effect
+::: {data-id="txt4" style="font-size: 70%; text-align: right; position: absolute; top: 378px; left: 13px;" .fragment .fade-in fragment-index=2}
+Coeff. for loading mode specific to sex
 :::
 
 ::::
@@ -260,37 +266,23 @@ we can see the dist of coeff for loading are similar in ext & flex. they are lit
 
 :::: {.column width="30%"}
 
-![](assets/intact.png){.absolute height="330" width="330" top="8%" left="1%" .fragment .fade-out fragment-index=1}
-
-![](assets/intact.png){.absolute height="330" width="330" top="48%" left="1%" .fragment .fade-out fragment-index=1}
-
-::: r-stack
-
-![](assets/fig1-p1.png){.fragment .fade-in-then-out .absolute height="330" width="330" top="8%" left="1%" fragment-index=1}
-
-![](assets/fig1-p2.png){.fragment .fade-in .absolute height="330" width="330" top="8%" left="1%" fragment-index=2}
-
-![](assets/fig2-p1.png){.fragment .fade-in-then-out .absolute height="330" width="330" top="48%" left="1%" fragment-index=1}
-
-![](assets/fig2-p2.png){.fragment .fade-in .absolute height="330" width="330" top="48%" left="1%" fragment-index=2}
-
-:::
+![](assets/flex-ext.png){.absolute top="25%" width="375"}
 
 ::::
 
 :::: {.column width="70%"}
 
-![](assets/contrast-sexwise.png){height="525"}
+::: r-stack
+
+![](assets/contrast-sexwise0.png){.fragment height="575"}
+
+![](assets/contrast-sexwise1.png){.fragment height="575"}
+
+:::
 
 ::::
 
 :::::
-
-::: aside
-
-FSU figures are for illustrative purpose only!
-
-:::
 
 ::: notes
 You could see a more fancier version of previous plot in this slide. In male, the top left plot, the dist of segmental rot at 3nm. the dist of flex & ext, they overlap, they are not different. Then if you look at the left bottom plot, for female, the ext is similar to male & the flex is higher & they dont overlap. And we can quantify that using contrast plots. the contrast dist is a diff of 2 dist. And in this case its the difference of flex & ext. if yu look for male in top right , its distributed around 0 which means there is no diff between flex & ext. But when we come to the female, we see the contrast dist is not abt 0, rather its about 4 deg showing that there is significant diff b/w flex & ext in female. 
@@ -298,39 +290,11 @@ You could see a more fancier version of previous plot in this slide. In male, th
 
 ## Contrast b/w Female & Male
 
-::::: columns
-
-:::: {.column width="30%"}
-
-![](assets/intact.png){.absolute height="330" width="330" top="8%" left="1%" .fragment .fade-out fragment-index=1}
-
-![](assets/intact.png){.absolute height="330" width="330" top="48%" left="1%" .fragment .fade-out fragment-index=1}
-
 ::: r-stack
 
-![](assets/fig3-p1.png){.fragment .fade-in-then-out .absolute height="330" width="330" top="8%" left="1%" fragment-index=1}
+![](assets/contrast-loadwise0.png){.fragment height="575"}
 
-![](assets/fig3-p2.png){.fragment .fade-in .absolute height="330" width="330" top="8%" left="1%" fragment-index=2}
-
-![](assets/fig4-p1.png){.fragment .fade-in-then-out .absolute height="330" width="330" top="48%" left="1%" fragment-index=1}
-
-![](assets/fig4-p2.png){.fragment .fade-in .absolute height="330" width="330" top="48%" left="1%" fragment-index=2}
-
-:::
-
-::::
-
-:::: {.column width="70%"}
-
-![](assets/contrast-loadwise.png){height="525"}
-
-::::
-
-:::::
-
-::: aside
-
-FSU figures are for illustrative purpose only!
+![](assets/contrast-loadwise1.png){.fragment height="575"}
 
 :::
 
@@ -340,17 +304,18 @@ Now we can see the data in a different way also. you could see the differnece in
 
 ## Conclusion
 
-- Male and female segments in extension tends to be similar
-- But in flexion, the female rotation was 4.5° more 
+- Male and female segments in **extension tends to be similar**
+- But **in flexion, the female rotation was 4.5° more** 
 than male in average
-- Female cervical spine segmental kinematics cannot be considered as size-scaled versions of male
+- Female cervical spine segmental kinematics ***cannot*** be considered as size-scaled versions of male
 
 ## Future Study
 
-
+![](assets/future.png){fig-align="center"}
 
 ## Acknowledgement
 
+The authors would like to acknowledge support from grants ANRF-SERB-CRG (CRG/2023/004727) and SPARC (SP23241582EDSPAR008343) in India and Swedish Transport Administration/Trafikverket grant (TRV2024/107142). 
 
 ## ![](assets/title-logos.png) {background-color="white"}
 

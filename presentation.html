@@ -360,18 +360,22 @@
 <h2>Introduction</h2>
 <div class="columns">
 <div class="column" style="font-size: 0.9em;">
+<div class="fragment fade-in" data-fragment-index="1">
 <ul>
 <li>Cervical spine segment - Two vertebra, Soft tissues</li>
 <li>Female have more risk of neck injury than male in traffic accidents</li>
+</ul>
+</div>
+<div class="fragment fade-in" data-fragment-index="2">
+<ul>
 <li>Recent dummies and HBMs also focus on average female</li>
 <li>Sex-specific calibration and validation are either limited or non-existent</li>
 </ul>
+</div>
 </div><div class="column" style="width:50%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="assets/hbm.jpg"></p>
-<figcaption>FE Human Body Models</figcaption>
-</figure>
+<div class="r-stack">
+<p><img data-src="assets/hbm0.jpg" class="fragment" data-fragment-index="1"></p>
+<p><img data-src="assets/hbm.jpg" class="fragment" data-fragment-index="2"></p>
 </div>
 </div><aside class="notes">
 <p>I assume most of the ppl in this hall would be majorly working on spine biomech. To give a small intro on C spine segments. It consists of 2 vertebra, and some ligaments in between like CL, ligamentum flavum, articular processes and so on.. then there is also IVD which have Annulus fibers and nucleus. Spinal injuries esp neck injuries in women are more than men specifically in traffic accidents. To study the injury in female, We use female HBM. However female HBMs are morphed versions of male HBMs and sex specific validation is not done on those models.</p>
@@ -408,10 +412,8 @@
 <section id="a-bit-of-background" class="slide level2">
 <h2>A Bit of Background…</h2>
 <div class="r-stack">
-<p><img data-src="assets/wheeldon2006.jpg" class="fragment absolute" style="top: 11%; left: 1%; width: 500px; "></p>
-<p><img data-src="assets/winkelstein2000.png" class="fragment absolute" style="top: 35%; left: 5%; width: 500px; "></p>
-<p><img data-src="assets/nightingale2007.jpg" class="fragment absolute" style="top: 14%; left: 45%; width: 500px; "></p>
-<p><img data-src="assets/nightingale2002.jpg" class="fragment absolute" style="top: 40%; left: 40%; width: 500px; "></p>
+<p><img data-src="assets/wheeldon2006.jpg" class="fragment absolute" style="top: 12%; left: 15%; width: 500px; "></p>
+<p><img data-src="assets/winkelstein2000.png" class="fragment absolute" style="top: 37%; left: 27%; width: 500px; "></p>
 </div>
 <aside class="notes">
 <p>To give a broader overview of avl data relevant to this study. First we have wheeldon study, there were both male &amp; female specimens but in the analysis everything were clubbed together. So we dunno the diff bw male &amp; female. Then we have this study by winkelstein but all the specimens in this study were male. Finalluy we have these studies by nightingale, where the data for male &amp; female were reported separately &amp; its available openly in NHTSA database.</p>
@@ -429,22 +431,12 @@
 </section>
 <section id="a-bit-of-background-1" class="slide level2" data-visibility="uncounted">
 <h2>A Bit of Background…</h2>
-<div class="columns">
-<div class="column" style="width:60%;">
-<ul>
-<li>Both studies are identical, differing only in sex of the specimens used</li>
-<li>Unembalmed PMHS</li>
-<li>Pure Moment Loads - Flexibility Tests (Max. 3.5Nm) &amp; Failure Tests</li>
-</ul>
-</div><div class="column" style="width:40%;">
-<p><br></p>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="assets/nightingale-schematic.jpg"></p>
-<figcaption>Schematic of experimental apparatus by Nightingale et al.,</figcaption>
-</figure>
+<div class="r-stack">
+<p><img data-src="assets/nightingale2007.jpg" class="fragment absolute" style="top: 14%; left: 1%; width: 500px; " data-fragment-index="1"></p>
+<p><img data-src="assets/nightingale2002.jpg" class="fragment absolute" style="top: 40%; left: 5%; width: 500px; " data-fragment-index="2"></p>
+<p><img data-src="assets/nightingale-schematic.jpg" class="fragment absolute" style="top: 27%; left: 60%; width: 400px; " data-fragment-index="3"></p>
 </div>
-</div></div>
+<p><span class="fragment absolute" data-fragment-index="3" style="font-size: 80%;top: 68%; left: 60%; width: 400px; ">Experimental setup used by Nightingale et al.,</span></p>
 <aside class="notes">
 <p>the exp setup was same for both the nightingale studies. so it can be made as a comparable study which was not done by the original author. c spine segments were cut from unembalmed pmhs and tested in flexibility &amp; failure tests</p>
 <style type="text/css">
@@ -528,21 +520,23 @@
 <div class="columns">
 <div class="column fragment" style="font-size: 90%;">
 <!-- -->
-<h4 id="traditional-way">Traditional Way</h4>
+<h4 id="mle-approach">MLE Approach</h4>
 <p><span class="math display">\[\begin{align}
-Y &amp;= \alpha + \beta X\\
+Y &amp;= \alpha + \beta X ± \sigma\\
+\\
 \alpha &amp;= \text{Constant (Intercept)}\\
 \beta &amp;= \text{Constant (Slope)}\\
+\sigma &amp;\sim \text{Normally distributed}
 \end{align}\]</span></p>
 </div><div class="column fragment" style="font-size: 90%;">
 <!-- -->
-<h4 id="doing-it-in-a-bayesian-way">Doing it in a Bayesian way…</h4>
+<h4 id="probabilistic-approach">Probabilistic Approach</h4>
 <p><span class="math display">\[\begin{align}
-\alpha &amp;\sim \text{a distribution}\\
-\beta &amp;\sim \text{another distribution}\\
-\sigma &amp;\sim \text{some other distribution}\\
-\mu &amp;= \alpha + \beta X\\
 Y &amp;\sim \operatorname{N}(\mu,~\sigma)\\
+\mu &amp;= \alpha + \beta X\\
+\alpha &amp;\sim \text{A distribution}\\
+\beta &amp;\sim \text{Another distribution}\\
+\sigma &amp;\sim \text{Some other distribution}\\
 \end{align}\]</span></p>
 </div><aside class="notes">
 <p>From the line of best fit, you would find the parameters a &amp; b as consts. another approach is to do bayesian linear reg. where these parameters are estimated as probability distributions</p>
@@ -587,17 +581,18 @@ Y &amp;\sim \operatorname{N}(\mu,~\sigma)\\
 <section id="bayesian-model-building" class="slide level2">
 <h2>Bayesian Model Building</h2>
 <div class="columns">
-<div class="column" style="font-size: 80%;">
-<ul>
-<li>Prior data from <em>Winkelstein2000</em></li>
-<li>Hierarchical model to include effect of Sex</li>
-</ul>
-<p><img data-src="assets/prior-pred.png" class="absolute" style="top: 33%; "></p>
+<div class="column" style="font-size: 60%;">
+<p><span class="math display">\[\begin{align}
+L_i &amp;= \text{Coeff. for loading mode}\\
+l_{ij} &amp;= \text{Coeff. for loading mode specific to sex}\\
+E &amp;= \text{Residual random error}\\
+\end{align}\]</span></p>
+<p><img data-src="assets/prior-pred.png" class="absolute" style="top: 33%; height: 60%; "></p>
 </div><div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="assets/bayesian-model.jpg"></p>
-<figcaption>Bayesian Linear Regression Model</figcaption>
+<figcaption>R= Segmental rotation angle at 3Nm</figcaption>
 </figure>
 </div>
 </div></div>
@@ -625,11 +620,11 @@ Y &amp;\sim \operatorname{N}(\mu,~\sigma)\\
 
 <img data-src="assets/forest-plot.png" class="quarto-figure quarto-figure-center r-stretch"><div class="columns">
 <div class="column" style="width:30%;">
-<div class="fragment fade-in" data-id="txt2" style="font-size: 0.9em; text-align: right; position: absolute; top: 155px; left: 52px;" data-fragment-index="1">
-<p>Common Effect</p>
+<div class="fragment fade-in" data-id="txt2" style="font-size: 70%; text-align: right; position: absolute; top: 157px; left: 52px;" data-fragment-index="1">
+<p>Coeff. for loading mode</p>
 </div>
-<div class="fragment fade-in" data-id="txt4" style="font-size: 0.9em; text-align: right; position: absolute; top: 375px; left: 13px;" data-fragment-index="2">
-<p>Group-level Effect</p>
+<div class="fragment fade-in" data-id="txt4" style="font-size: 70%; text-align: right; position: absolute; top: 378px; left: 13px;" data-fragment-index="2">
+<p>Coeff. for loading mode specific to sex</p>
 </div>
 </div><div class="column" style="width:60%;">
 
@@ -657,18 +652,13 @@ Y &amp;\sim \operatorname{N}(\mu,~\sigma)\\
 <h2>Contrast b/w Flexion &amp; Extension</h2>
 <div class="columns">
 <div class="column" style="width:30%;">
-<p><img data-src="assets/intact.png" class="absolute fragment fade-out" style="top: 8%; left: 1%; width: 330px; height: 330px; " data-fragment-index="1"></p>
-<p><img data-src="assets/intact.png" class="absolute fragment fade-out" style="top: 48%; left: 1%; width: 330px; height: 330px; " data-fragment-index="1"></p>
-<div class="r-stack">
-<p><img data-src="assets/fig1-p1.png" class="fragment fade-in-then-out absolute" style="top: 8%; left: 1%; width: 330px; height: 330px; " data-fragment-index="1"></p>
-<p><img data-src="assets/fig1-p2.png" class="fragment fade-in absolute" style="top: 8%; left: 1%; width: 330px; height: 330px; " data-fragment-index="2"></p>
-<p><img data-src="assets/fig2-p1.png" class="fragment fade-in-then-out absolute" style="top: 48%; left: 1%; width: 330px; height: 330px; " data-fragment-index="1"></p>
-<p><img data-src="assets/fig2-p2.png" class="fragment fade-in absolute" style="top: 48%; left: 1%; width: 330px; height: 330px; " data-fragment-index="2"></p>
-</div>
+<p><img data-src="assets/flex-ext.png" class="absolute" style="top: 25%; width: 375px; "></p>
 </div><div class="column" style="width:70%;">
-<p><img data-src="assets/contrast-sexwise.png" height="525"></p>
+<div class="r-stack">
+<p><img data-src="assets/contrast-sexwise0.png" class="fragment" height="575"></p>
+<p><img data-src="assets/contrast-sexwise1.png" class="fragment" height="575"></p>
+</div>
 </div></div>
-
 <aside class="notes">
 <p>You could see a more fancier version of previous plot in this slide. In male, the top left plot, the dist of segmental rot at 3nm. the dist of flex &amp; ext, they overlap, they are not different. Then if you look at the left bottom plot, for female, the ext is similar to male &amp; the flex is higher &amp; they dont overlap. And we can quantify that using contrast plots. the contrast dist is a diff of 2 dist. And in this case its the difference of flex &amp; ext. if yu look for male in top right , its distributed around 0 which means there is no diff between flex &amp; ext. But when we come to the female, we see the contrast dist is not abt 0, rather its about 4 deg showing that there is significant diff b/w flex &amp; ext in female.</p>
 <style type="text/css">
@@ -682,25 +672,13 @@ Y &amp;\sim \operatorname{N}(\mu,~\sigma)\\
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-<aside><div>
-<p>FSU figures are for illustrative purpose only!</p>
-</div></aside></section>
+</section>
 <section id="contrast-bw-female-male" class="slide level2">
 <h2>Contrast b/w Female &amp; Male</h2>
-<div class="columns">
-<div class="column" style="width:30%;">
-<p><img data-src="assets/intact.png" class="absolute fragment fade-out" style="top: 8%; left: 1%; width: 330px; height: 330px; " data-fragment-index="1"></p>
-<p><img data-src="assets/intact.png" class="absolute fragment fade-out" style="top: 48%; left: 1%; width: 330px; height: 330px; " data-fragment-index="1"></p>
 <div class="r-stack">
-<p><img data-src="assets/fig3-p1.png" class="fragment fade-in-then-out absolute" style="top: 8%; left: 1%; width: 330px; height: 330px; " data-fragment-index="1"></p>
-<p><img data-src="assets/fig3-p2.png" class="fragment fade-in absolute" style="top: 8%; left: 1%; width: 330px; height: 330px; " data-fragment-index="2"></p>
-<p><img data-src="assets/fig4-p1.png" class="fragment fade-in-then-out absolute" style="top: 48%; left: 1%; width: 330px; height: 330px; " data-fragment-index="1"></p>
-<p><img data-src="assets/fig4-p2.png" class="fragment fade-in absolute" style="top: 48%; left: 1%; width: 330px; height: 330px; " data-fragment-index="2"></p>
+<p><img data-src="assets/contrast-loadwise0.png" class="fragment" height="575"></p>
+<p><img data-src="assets/contrast-loadwise1.png" class="fragment" height="575"></p>
 </div>
-</div><div class="column" style="width:70%;">
-<p><img data-src="assets/contrast-loadwise.png" height="525"></p>
-</div></div>
-
 <aside class="notes">
 <p>Now we can see the data in a different way also. you could see the differnece in male &amp; female in extension which is in top row.. and flexion is in bottom row. Anyways we see similar differences.</p>
 <style type="text/css">
@@ -714,22 +692,22 @@ Y &amp;\sim \operatorname{N}(\mu,~\sigma)\\
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-<aside><div>
-<p>FSU figures are for illustrative purpose only!</p>
-</div></aside></section>
+</section>
 <section id="conclusion" class="slide level2">
 <h2>Conclusion</h2>
 <ul>
-<li>Male and female segments in extension tends to be similar</li>
-<li>But in flexion, the female rotation was 4.5° more than male in average</li>
-<li>Female cervical spine segmental kinematics cannot be considered as size-scaled versions of male</li>
+<li>Male and female segments in <strong>extension tends to be similar</strong></li>
+<li>But <strong>in flexion, the female rotation was 4.5° more</strong> than male in average</li>
+<li>Female cervical spine segmental kinematics <strong><em>cannot</em></strong> be considered as size-scaled versions of male</li>
 </ul>
 </section>
 <section id="future-study" class="slide level2">
 <h2>Future Study</h2>
-</section>
+
+<img data-src="assets/future.png" class="quarto-figure quarto-figure-center r-stretch"></section>
 <section id="acknowledgement" class="slide level2">
 <h2>Acknowledgement</h2>
+<p>The authors would like to acknowledge support from grants ANRF-SERB-CRG (CRG/2023/004727) and SPARC (SP23241582EDSPAR008343) in India and Swedish Transport Administration/Trafikverket grant (TRV2024/107142).</p>
 </section>
 <section id="section-1" class="slide level2" data-background-color="white">
 <h2><img data-src="assets/title-logos.png"></h2>
@@ -991,7 +969,6 @@ l_{ij} \sim \operatorname{Normal}(0,~\sigma_{l_{i}})
           display:block!important;
       }</style></aside>
 <div class="quarto-auto-generated-content">
-<p><img src="assets/ircobi-logo.jpg" class="slide-logo"></p>
 <div class="footer footer-default">
 <p>Comparison of Flexion–Extension Responses between Male and Female sub-Axial Cervical Spine Segments</p>
 </div>
