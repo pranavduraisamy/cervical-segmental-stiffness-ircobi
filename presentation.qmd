@@ -105,7 +105,7 @@ To give a broader overview of avl data relevant to this study. First we have whe
 
 :::
 
-[Experimental setup used by Nightingale et al.,]{.fragment fragment-index=3 .absolute top="68%" left="60%" width="400" style="font-size: 80%;"}
+[Experimental setup used by Nightingale et al.]{.fragment fragment-index=3 .absolute top="68%" left="60%" width="400" style="font-size: 80%;"}
 
 ::: notes
 the exp setup was same for both the nightingale studies. so it can be made as a comparable study which was not done by the original author. c spine segments were cut from unembalmed pmhs and tested in flexibility & failure tests
@@ -210,9 +210,10 @@ E &= \text{Residual random error}\\
 ![](assets/prior-pred.png){.absolute top="33%" height="60%"}
 :::::
 
-::::: {.column width="45%"}
+::::: {.column width="45%" style="font-size: 68%;"}
 
-![R= Segmental rotation angle at 3Nm](assets/bayesian-model.jpg)
+![](assets/bayesian-model.jpg)
+**R = Segmental rotation angle at 3Nm**
 
 :::::
 
@@ -260,7 +261,7 @@ Coeff. for loading mode specific to sex
 we can see the dist of coeff for loading are similar in ext & flex. they are literally on top of each other. but if you look at this, the coeff for multilevel loading given sex in Ext, male & female are similar. but in flexion, we cans ee a clear difference between male & female.
 :::
 
-## Contrast b/w Flexion & Extension
+## Comparison: Flexion & Extension
 
 ::::: columns
 
@@ -288,7 +289,7 @@ we can see the dist of coeff for loading are similar in ext & flex. they are lit
 You could see a more fancier version of previous plot in this slide. In male, the top left plot, the dist of segmental rot at 3nm. the dist of flex & ext, they overlap, they are not different. Then if you look at the left bottom plot, for female, the ext is similar to male & the flex is higher & they dont overlap. And we can quantify that using contrast plots. the contrast dist is a diff of 2 dist. And in this case its the difference of flex & ext. if yu look for male in top right , its distributed around 0 which means there is no diff between flex & ext. But when we come to the female, we see the contrast dist is not abt 0, rather its about 4 deg showing that there is significant diff b/w flex & ext in female. 
 :::
 
-## Contrast b/w Female & Male
+## Comparison: Female & Male
 
 ::: r-stack
 
@@ -309,13 +310,14 @@ Now we can see the data in a different way also. you could see the differnece in
 than male in average
 - Female cervical spine segmental kinematics ***cannot*** be considered as size-scaled versions of male
 
-## Future Study
-
-![](assets/future.png){fig-align="center"}
-
 ## Acknowledgement
 
-The authors would like to acknowledge support from grants ANRF-SERB-CRG (CRG/2023/004727) and SPARC (SP23241582EDSPAR008343) in India and Swedish Transport Administration/Trafikverket grant (TRV2024/107142). 
+- Travel Grant for IRCOBI 2025 by Toyota 
+- ANRF-SERB-CRG (CRG/2023/004727) in India
+- SPARC (SP23241582EDSPAR008343) in India
+- Swedish Transport Administration/Trafikverket grant (TRV2024/107142)
+
+![](assets/sponsors.png){fig-align="center"}
 
 ## ![](assets/title-logos.png) {background-color="white"}
 
@@ -545,5 +547,9 @@ Group-level Effect
 :::::
 
 ::: notes
-poterior is the result of baye ana. & reflects all we know about the problem. post is just a updated prior due to sampling in the light of a new data (fit data/ training data)
+meow meow
 :::
+
+## Future Study
+
+![](assets/future.png){fig-align="center"}
