@@ -50,3 +50,7 @@ tabula
 xarray==2025.1.2
 zipfile
 ```
+## Links
+
+|[Publication](https://www.ircobi.org/wordpress/downloads/irc25/pdf-files/25115.pdf)|[Presentation](https://pranavduraisamy.github.io/cervical-segmental-stiffness-ircobi/presentation.html)|
+| ------------- | ------------- |
