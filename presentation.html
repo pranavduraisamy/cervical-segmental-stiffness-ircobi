@@ -343,7 +343,7 @@
 <p>IRCOBI Europe 2025 | Vilnius | 11 Sept 2025</p>
 </div>
 <aside class="notes">
-<p>Hi, Im pranav, recently completed my bachelors in mech. this study is a result of my bachelors pjt thesis. its mainly concentrated on sex diff in sub axial c spine segments</p>
+<p>Hi, Im pranav, recently completed my bachelors in mech. This study is an outcome of my bachelor’s pjt thesis. It mainly focused on sex differences in subaxial c spine segments.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -378,7 +378,7 @@
 <p><img data-src="assets/hbm.jpg" class="fragment" data-fragment-index="2"></p>
 </div>
 </div><aside class="notes">
-<p>I assume most of the ppl in this hall would be majorly working on spine biomech. To give a small intro on C spine segments. It consists of 2 vertebra, and some ligaments in between like CL, ligamentum flavum, articular processes and so on.. then there is also IVD which have Annulus fibers and nucleus. Spinal injuries esp neck injuries in women are more than men specifically in traffic accidents. To study the injury in female, We use female HBM. However female HBMs are morphed versions of male HBMs and sex specific validation is not done on those models.</p>
+<p>I can see many ppl in this hall who were majorly working on spine biomech. To give a brief intro on C spine segments. It consists of 2 vertebra, and some ligaments in between like CL, ligamentum flavum, articular processes and so on.. then there is also IVD which have Annulus fibers and nucleus. Spinal injuries esp neck injuries in women are more than men specifically in traffic accidents. To study the injury in female, We use female HBM. However female HBMs are morphed versions of male HBMs and sex specific validation is not done on those models.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -416,7 +416,7 @@
 <p><img data-src="assets/winkelstein2000.png" class="fragment absolute" style="top: 37%; left: 27%; width: 500px; "></p>
 </div>
 <aside class="notes">
-<p>To give a broader overview of avl data relevant to this study. First we have wheeldon study, there were both male &amp; female specimens but in the analysis everything were clubbed together. So we dunno the diff bw male &amp; female. Then we have this study by winkelstein but all the specimens in this study were male. Finalluy we have these studies by nightingale, where the data for male &amp; female were reported separately &amp; its available openly in NHTSA database.</p>
+<p>Let’s take a look at some avl data that is related to this study. In some experiments, there were both male &amp; female specimens but in the analysis everything was clubbed together. So we dunno the diff bw male &amp; female. For example, this study by Wheeldon et al.&nbsp;Then we have this study by winkelstein et al but all the specimens in this study were male.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -438,7 +438,7 @@
 </div>
 <p><span class="fragment absolute" data-fragment-index="3" style="font-size: 80%;top: 68%; left: 60%; width: 400px; ">Experimental setup used by Nightingale et al.</span></p>
 <aside class="notes">
-<p>the exp setup was same for both the nightingale studies. so it can be made as a comparable study which was not done by the original author. c spine segments were cut from unembalmed pmhs and tested in flexibility &amp; failure tests</p>
+<p>Finally we have these studies by nightingale, where the data for male &amp; female were reported separately &amp; its available openly in NHTSA database. the exp setup was same for both the nightingale studies. so it can be made as a comparable study which was not done by the original author. c spine segments were cut from unembalmed pmhs and tested in flexibility &amp; failure tests</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -464,7 +464,7 @@
 </figure>
 </div>
 <aside class="notes">
-<p>This slide shows no of specimens tested. just for the moment, consider c3c4 there are 11 specimens for female but there is only 1 specimen for its very adjacent c4c5 . this is because of the segmentation of fsus. same trend follows for male too but different segments. bayesian methodology is more apt for these kind of data.</p>
+<p>This slide shows no of specimens tested. just for the moment, consider c3c4 there are 11 specimens for female but there is only 1 specimen for its very adjacent c4c5 . this is because of the segmentation of fsus. same trend follows for male too but different segments.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -539,7 +539,7 @@ Y &amp;\sim \operatorname{N}(\mu,~\sigma)\\
 \sigma &amp;\sim \text{Some other distribution}\\
 \end{align}\]</span></p>
 </div><aside class="notes">
-<p>From the line of best fit, you would find the parameters a &amp; b as consts. another approach is to do bayesian linear reg. where these parameters are estimated as probability distributions</p>
+<p>From the line of best fit, you could find the parameters a &amp; b as consts. another approach is to do bayesian linear reg. where these parameters are estimated as probability distributions</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -610,6 +610,23 @@ E &amp;= \text{Residual random error}\\
 <h1>Results &amp; Discussion</h1>
 
 </section>
+<section id="prior-to-posterior-predictive" class="slide level2">
+<h2>Prior to Posterior Predictive</h2>
+
+<img data-src="assets/post-pred.png" class="quarto-figure quarto-figure-center r-stretch"><aside class="notes">
+<p>If you compare the x-axis of both the plots, you could find that plausible range for rotation angle at 3Nm got shrinked after fitting the nightingale data to the model. Also the mean of all the samples (blue lines) are closely aligned with the observed data.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
 <section id="posterior-distributions" class="slide level2">
 <h2>Posterior Distributions</h2>
 
@@ -630,7 +647,7 @@ E &amp;= \text{Residual random error}\\
 </div>
 </div>
 <aside class="notes">
-<p>we can see the dist of coeff for loading are similar in ext &amp; flex. they are literally on top of each other. but if you look at this, the coeff for multilevel loading given sex in Ext, male &amp; female are similar. but in flexion, we cans ee a clear difference between male &amp; female.</p>
+<p>we can see the dist of coeff for loading are similar in ext &amp; flex. they are literally on top of each other. but if you look at this, the coeff for multilevel loading given sex in Ext, male &amp; female are similar. but in flexion, we can see a clear difference between male &amp; female.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -695,6 +712,19 @@ E &amp;= \text{Residual random error}\\
 <li>But <strong>in flexion, the female rotation was 4.5° more</strong> than male in average</li>
 <li>Female cervical spine segmental kinematics <strong><em>cannot</em></strong> be considered as size-scaled versions of male</li>
 </ul>
+<aside class="notes">
+<p>key take aways from this study are:</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="acknowledgement" class="slide level2">
 <h2>Acknowledgement</h2>
@@ -705,7 +735,20 @@ E &amp;= \text{Residual random error}\\
 <li>Swedish Transport Administration/Trafikverket grant (TRV2024/107142)</li>
 </ul>
 
-<img data-src="assets/sponsors.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<img data-src="assets/sponsors.png" class="quarto-figure quarto-figure-center r-stretch"><aside class="notes">
+<p>Finally, i would like to acknowledge all the grants recieved for this study</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
 <section id="section-1" class="slide level2" data-background-color="white">
 <h2><img data-src="assets/title-logos.png"></h2>
 <img data-src="assets/qr.png">

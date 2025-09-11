@@ -32,7 +32,7 @@ IRCOBI Europe 2025 \| Vilnius \| 11 Sept 2025
 :::
 
 ::: notes
-Hi, Im pranav, recently completed my bachelors in mech. this study is a result of my bachelors pjt thesis. its mainly concentrated on sex diff in sub axial c spine segments
+Hi, Im pranav, recently completed my bachelors in mech. This study is an outcome of my bachelor's pjt thesis. It mainly focused on sex differences in subaxial c spine segments.
 :::
 
 ## Introduction 
@@ -65,7 +65,7 @@ Hi, Im pranav, recently completed my bachelors in mech. this study is a result o
 ::::
 
 ::: notes
-I assume most of the ppl in this hall would be majorly working on spine biomech. To give a small intro on C spine segments. It consists of 2 vertebra, and some ligaments in between like CL, ligamentum flavum, articular processes and so on.. then there is also IVD which have Annulus fibers and nucleus. Spinal injuries esp neck injuries in women are more than men specifically in traffic accidents. To study the injury in female,  We use female HBM. However female HBMs are morphed versions of male HBMs and sex specific validation is not done on those models.
+I can see many ppl in this hall who were majorly working on spine biomech. To give a brief intro on C spine segments. It consists of 2 vertebra, and some ligaments in between like CL, ligamentum flavum, articular processes and so on.. then there is also IVD which have Annulus fibers and nucleus. Spinal injuries esp neck injuries in women are more than men specifically in traffic accidents. To study the injury in female,  We use female HBM. However female HBMs are morphed versions of male HBMs and sex specific validation is not done on those models.
 :::
 
 ::::::
@@ -90,7 +90,7 @@ That leads to the objective of this study, thats to quantify the differences bet
 :::
 
 ::: notes
-To give a broader overview of avl data relevant to this study. First we have wheeldon study, there were both male & female specimens but in the analysis everything were clubbed together. So we dunno the diff bw male & female. Then we have this study by winkelstein but all the specimens in this study were male. Finalluy we have these studies by nightingale, where the data for male & female were reported separately & its available openly in NHTSA database.
+Let's take a look at some avl data that is related to this study. In some experiments, there were both male & female specimens but in the analysis everything was clubbed together. So we dunno the diff bw male & female. For example, this study by Wheeldon et al. Then we have this study by winkelstein et al but all the specimens in this study were male. 
 :::
 
 ## A Bit of Background... {visibility="uncounted"}
@@ -108,7 +108,7 @@ To give a broader overview of avl data relevant to this study. First we have whe
 [Experimental setup used by Nightingale et al.]{.fragment fragment-index=3 .absolute top="68%" left="60%" width="400" style="font-size: 80%;"}
 
 ::: notes
-the exp setup was same for both the nightingale studies. so it can be made as a comparable study which was not done by the original author. c spine segments were cut from unembalmed pmhs and tested in flexibility & failure tests
+Finally we have these studies by nightingale, where the data for male & female were reported separately & its available openly in NHTSA database. the exp setup was same for both the nightingale studies. so it can be made as a comparable study which was not done by the original author. c spine segments were cut from unembalmed pmhs and tested in flexibility & failure tests
 :::
 
 # Methods
@@ -118,7 +118,7 @@ the exp setup was same for both the nightingale studies. so it can be made as a 
 ![](assets/count-data.jpg){fig-align="center" height="550"}
 
 ::: notes
-This slide shows no of specimens tested. just for the moment, consider c3c4 there are 11 specimens for female but there is only 1 specimen for its very adjacent c4c5 . this is because of the segmentation of fsus. same trend follows for male too but different segments. bayesian methodology is more apt for these kind of data.
+This slide shows no of specimens tested. just for the moment, consider c3c4 there are 11 specimens for female but there is only 1 specimen for its very adjacent c4c5 . this is because of the segmentation of fsus. same trend follows for male too but different segments.
 :::
 
 ## Exploratory Data Analysis 
@@ -178,7 +178,7 @@ Y &\sim \operatorname{N}(\mu,~\sigma)\\
 ::::
 
 ::: notes
-From the line of best fit, you would find the parameters a & b as consts. another approach is to do bayesian linear reg. where these parameters are estimated as probability distributions
+From the line of best fit, you could find the parameters a & b as consts. another approach is to do bayesian linear reg. where these parameters are estimated as probability distributions
 :::
 
 :::::
@@ -226,6 +226,15 @@ Coming back to this study, we know that when 3nm moment is applied, the rotation
 
 # Results & Discussion
 
+## Prior to Posterior Predictive
+
+![](assets/post-pred.png){fig-align="center"}
+
+::: notes
+If you compare the x-axis of both the plots, you could find that plausible range for rotation angle at 3Nm got shrinked after fitting the nightingale data to the model. Also the mean of all the samples (blue lines) are closely aligned with the observed data.
+
+:::
+
 ## Posterior Distributions
 
 ![](assets/forest-plot.png){fig-align="center"}
@@ -258,7 +267,7 @@ Coeff. for loading mode specific to sex
 :::::
 
 ::: notes
-we can see the dist of coeff for loading are similar in ext & flex. they are literally on top of each other. but if you look at this, the coeff for multilevel loading given sex in Ext, male & female are similar. but in flexion, we cans ee a clear difference between male & female.
+we can see the dist of coeff for loading are similar in ext & flex. they are literally on top of each other. but if you look at this, the coeff for multilevel loading given sex in Ext, male & female are similar. but in flexion, we can see a clear difference between male & female.
 :::
 
 ## Comparison: Flexion & Extension
@@ -310,6 +319,10 @@ Now we can see the data in a different way also. you could see the differnece in
 than male in average
 - Female cervical spine segmental kinematics ***cannot*** be considered as size-scaled versions of male
 
+::: notes
+key take aways from this study are:
+:::
+
 ## Acknowledgement
 
 - Travel Grant for IRCOBI 2025 by Toyota 
@@ -318,6 +331,10 @@ than male in average
 - Swedish Transport Administration/Trafikverket grant (TRV2024/107142)
 
 ![](assets/sponsors.png){fig-align="center"}
+
+::: notes
+Finally, i would like to acknowledge all the grants recieved for this study
+:::
 
 ## ![](assets/title-logos.png) {background-color="white"}
 
