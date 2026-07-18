@@ -32,6 +32,13 @@ cervical-segmental-stiffness-ircobi/main/
     ├───code                    # EDA Plots and Bayesian model
     └───processed-data          # Data used in the model, inference data pickle file
 ```
+
+> [!NOTE]
+> 
+> Codes in this repository is licensed under the MIT License. See [LICENSE](LICENSE.md).
+> 
+> Plots and figures are licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0) License. See [LICENSE-CC-BY](LICENSE-CC-BY.md).
+
 ## Required modules
 ```
 arviz==0.17.1
@@ -54,3 +61,5 @@ zipfile
 
 |[Publication](https://www.ircobi.org/wordpress/downloads/irc25/pdf-files/25115.pdf)|[Presentation](https://pranavduraisamy.github.io/cervical-segmental-stiffness-ircobi/presentation.html)|
 | ------------- | ------------- |
+
+
